@@ -1,6 +1,10 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
+using System.Collections.Generic;
+
 
 namespace _2UgersProject_Stardew_Valley
 {
@@ -8,7 +12,10 @@ namespace _2UgersProject_Stardew_Valley
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+        private static Vector2 screenSize;
 
+        private List<GameObjects> gameObjects = new List<GameObjects>();
+        private static List<GameObjects> gameObjectsToAdd = new List<GameObjects>();
         public GameWorld()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -47,6 +54,10 @@ namespace _2UgersProject_Stardew_Valley
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);
+        }
+        protected void InstantiateGameObjects(GameObjects go)
+        {
+
         }
     }
 }
