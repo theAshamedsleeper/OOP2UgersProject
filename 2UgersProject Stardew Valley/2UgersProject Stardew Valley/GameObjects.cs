@@ -44,7 +44,7 @@ namespace _2UgersProject_Stardew_Valley
         }
         public void Draw(SpriteBatch spriteBatch)
         {
-
+            
         }
         public Rectangle GetCollisionBox
         {

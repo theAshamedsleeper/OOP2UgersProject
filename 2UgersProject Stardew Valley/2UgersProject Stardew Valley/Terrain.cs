@@ -13,7 +13,6 @@ namespace _2UgersProject_Stardew_Valley
 {
     internal static class Terrain
 {
-    private Texture2D sprites;
 
         private static float animation_Speed = 0;
         private static float animation_Time = 0;
@@ -53,7 +52,7 @@ namespace _2UgersProject_Stardew_Valley
                 case int n when (n >= 1 && n <= 8):
                     return 1;
                 case int n when (n >= 9 && n <= 15):
-                    return 2;
+                    return 0;
             }
             return 0;
         }
@@ -96,27 +95,28 @@ namespace _2UgersProject_Stardew_Valley
         {
             get { return tiles_x[0]; }
         }
-        static int Which_Terrain(int[] pos, int[] tx, int[] ty, int[] t)
+        public static int Which_Terrain(int x, int y)
         {
-            // posision of a given input, and returns the position of where in the array of briks, that is the given value of the coordinate of the input.
-            // checks where in array of y coordinates, the given inpus is.
-            int y_1 = pos[1] - pos[1] % 32;
-            int x_1 = pos[0] - pos[0] % 32;
+            // Makes input applicable for sprite size.
+            int y_1 = (y - (y % 32))/32;
+            int x_1 = (x - (x % 32))/32;
+            // xmod * width is basically the location of our y pos in y array
             int x_mod = 0;
-            /* it locates the correct pos in the array by going down 8 times in x by each y value, as 8 is then the y value increases.
-            * and the coordinate system could be written in one array, where each pos is x, up to 64, so i return it to that. */
+            // locate location of y pos in y array
             for (int i = 0; i < height; i++)
             {
-                if (ty[i * width] == y_1)
+                if (tiles_y[i * width] == y_1)
                 {
                     x_mod = i;
                 }
             }
+            // locates x pos in x array, but its increases by y array possion amount.
             for (int i = 0; i < width; i++)
             {
-                if (tx[(x_mod * width) + i] == x_1)
+                if (tiles_x[(x_mod * width) + i] == x_1)
                 {
-                    return t[(x_mod * width) + i];
+                    // found the location of the value of terrain in terrain array
+                    return tiles_t[(x_mod * width) + i];
                 }
             }
             return 0;
