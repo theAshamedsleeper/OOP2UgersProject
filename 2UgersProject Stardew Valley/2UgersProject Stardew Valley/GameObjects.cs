@@ -32,14 +32,8 @@ namespace _2UgersProject_Stardew_Valley
                 return new Vector2(currentSprite.Width * scale, currentSprite.Height * scale);
             }
         }
-        public void LoadContent(ContentManager content)
-        {
-
-        }
-        public void Update(GameTime gameTime)
-        {
-
-        }
+        public abstract void LoadContent(ContentManager content);
+        public abstract void Update(GameTime gameTime);
         protected void Animate(GameTime gameTime)
         {
 
