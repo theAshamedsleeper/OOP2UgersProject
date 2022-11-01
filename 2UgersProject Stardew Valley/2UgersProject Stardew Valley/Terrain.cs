@@ -16,8 +16,8 @@ namespace _2UgersProject_Stardew_Valley
 
         private static float animation_Speed = 0;
         private static float animation_Time = 0;
-        private static int width = 800 / 32;
-        private static int height = 480 / 32;
+        private static int width = 1024 / 32;
+        private static int height = 576 / 32;
         private static int x_1 = 0;
         private static int y_1 = 0;
         private static int z_1 = 0;
