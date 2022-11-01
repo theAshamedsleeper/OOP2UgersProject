@@ -95,11 +95,11 @@ namespace _2UgersProject_Stardew_Valley
         {
             get { return tiles_x[0]; }
         }
-        public static int Which_Terrain(int x, int y)
+        public static int Which_Terrain(float x, float y)
         {
             // Makes input applicable for sprite size.
-            int y_1 = (y - (y % 32))/32;
-            int x_1 = (x - (x % 32))/32;
+            float y_1 = (y - (y % 32f))/32f;
+            float x_1 = (x - (x % 32f))/32f;
             // xmod * width is basically the location of our y pos in y array
             int x_mod = 0;
             // locate location of y pos in y array

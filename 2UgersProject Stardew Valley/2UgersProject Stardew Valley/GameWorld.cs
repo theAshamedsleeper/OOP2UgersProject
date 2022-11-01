@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using System.Collections.Generic;
+using static System.Formats.Asn1.AsnWriter;
 
 
 namespace _2UgersProject_Stardew_Valley
@@ -15,12 +16,17 @@ namespace _2UgersProject_Stardew_Valley
         private static Vector2 screenSize;
         private Texture2D grass_terrain;
         private Texture2D texture_terrain;
+        private Rectangle terainRec;
         private List<GameObjects> gameObjects = new List<GameObjects>();
         private static List<GameObjects> gameObjectsToAdd = new List<GameObjects>();
+        private float worldScale = 2.3f;//error visable at 2.3f not if over
         public GameWorld()
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            _graphics.PreferredBackBufferHeight = 1080;
+            _graphics.PreferredBackBufferWidth = 1920;
+            screenSize = new Vector2(_graphics.PreferredBackBufferWidth, _graphics.PreferredBackBufferHeight);
             IsMouseVisible = true;
         }
 
@@ -36,6 +42,7 @@ namespace _2UgersProject_Stardew_Valley
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             grass_terrain = Content.Load<Texture2D>("pixil-frame-0");
 
+           
             // TODO: use this.Content to load your game content here
         }
 
@@ -53,8 +60,8 @@ namespace _2UgersProject_Stardew_Valley
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
             _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
-            int gx = 0;
-            int gy = 0;
+            float gx = 0f;
+            float gy = 0f;
             for (int i = 0; i < 375; i++)
             {
                 switch (Terrain.Which_Terrain(gx, gy))
@@ -63,15 +70,23 @@ namespace _2UgersProject_Stardew_Valley
                         texture_terrain = grass_terrain;
                         break;
                 }
-                _spriteBatch.Draw(texture_terrain, new Vector2(gx, gy), Color.White);
-                if (gx == 800 - 32)
+                _spriteBatch.Draw(texture_terrain,//what to draw
+                new Vector2(gx, gy),//place to draw it
+                null,//rectangle
+                Color.White,//color of player
+               0f, //Rotation of player
+                Vector2.Zero,//Orgin Point
+                worldScale,//How big is the player
+                SpriteEffects.None,//effects
+                0f);//Layer 
+                if (gx >= 1920 - 32*worldScale)
                 {
                     gx = 0;
-                    gy += 32;
-                }
+                    gy += 32f * worldScale;
+        }
                 else
                 {
-                    gx += 32;
+                    gx += 32f*worldScale;
                 }
             }
             _spriteBatch.End();

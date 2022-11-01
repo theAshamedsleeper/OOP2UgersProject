@@ -50,3 +50,5 @@ C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProje
 C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Debug\net6.0\2UgersProject Stardew Valley.csproj.CopyComplete
 C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Debug\net6.0\2UgersProject Stardew Valley.genruntimeconfig.cache
 C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Debug\net6.0\ref\2UgersProject Stardew Valley.dll
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixil-frame-0.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixil-frame-1.xnb
