@@ -19,7 +19,7 @@ namespace _2UgersProject_Stardew_Valley
         private Rectangle terainRec;
         private List<GameObjects> gameObjects = new List<GameObjects>();
         private static List<GameObjects> gameObjectsToAdd = new List<GameObjects>();
-        private float worldScale = 2.3f;//error visable at 2.3f not if over
+        private float worldScale = 2.4f;//2.4f så passer den i width
         public GameWorld()
         {
             _graphics = new GraphicsDeviceManager(this);
