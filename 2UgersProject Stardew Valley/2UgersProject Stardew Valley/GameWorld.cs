@@ -8,6 +8,7 @@ namespace _2UgersProject_Stardew_Valley
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+        //Yo Waddup
 
         public GameWorld()
         {
