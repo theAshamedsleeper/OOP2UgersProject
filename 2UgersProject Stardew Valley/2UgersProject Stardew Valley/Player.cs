@@ -30,9 +30,9 @@ namespace _2UgersProject_Stardew_Valley
         {
 
         }
-        protected void LoadContent()
+        public override void LoadContent(ContentManager content)
         {
-
+            throw new System.NotImplementedException();
         }
     }
 }
