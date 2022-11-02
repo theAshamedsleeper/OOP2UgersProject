@@ -15,35 +15,30 @@ namespace _2UgersProject_Stardew_Valley
 
         public Player(Vector2 pos) : base(pos)
         {
-            scale = 1.875f;
+            scale = 5f;//1.875f for nomral scale
         }
 
         public override void LoadContent(ContentManager content)
         {
-            //tester
-            charaset = content.Load<Texture2D>("Animation/IdleSpriteSheet");
+            charaset = new Texture2D[6];
+            threshold = 40;//miliseconds
+            #region Idle
+            charaset[0] = content.Load<Texture2D>("Animation/IdleSpriteSheet");
             position1 = new Vector2(10, 10);
-            timer = 0;
-            threshold = 50;//miliseconds
+            idleTimer = 0;
+            #endregion
+            #region WalkLeft
+            charaset[1] = content.Load<Texture2D>("Animation/WalkAnim");
+            position1 = new Vector2(10, 10);
+            walkThreshold = 150;//miliseconds
+            walkTimer = 0;
+            #endregion
+
         }
         public override void Update(GameTime gameTime)
         {
             sourceRectangles = new Rectangle(x1, 0, 32, 64);
-            timer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
-            // Check if the timer has exceeded the threshold.
-            if (timer > threshold)
-            {
-                if (x1 >= 32*66)
-                {
-                    x1 = 0;
-                    timer = 0;
-                }
-                else
-                {
-                    x1 += 32;
-                    timer = 0;
-                }
-            }
+
             Move(gameTime);
             //Animate(gameTime);
             HandleInput(gameTime);
@@ -58,6 +53,29 @@ namespace _2UgersProject_Stardew_Valley
             {
                 velocity += new Vector2(0, -1);
             }
+            //Runs Idle Animation
+            #region Idle anim
+            if (!keySate.IsKeyDown(Keys.S) && !keySate.IsKeyDown(Keys.W) && !keySate.IsKeyDown(Keys.A) && !keySate.IsKeyDown(Keys.D))
+            {
+                idleTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+                // Check if the timer has exceeded the threshold.
+                charSpriteIndex = 0;
+                if (idleTimer > threshold)
+                {
+                    if (x1 >= 32 * 66)
+                    {
+                        x1 = 0;
+                        idleTimer = 0;
+                    }
+                    else
+                    {
+                        x1 += 32;
+                        idleTimer = 0;
+                    }
+                }
+            }
+            #endregion
+            #region walk
             if (keySate.IsKeyDown(Keys.S))
             {
                 velocity += new Vector2(0, 1);
@@ -66,14 +84,33 @@ namespace _2UgersProject_Stardew_Valley
             {
                 velocity += new Vector2(-1, 0);
             }
+            #region WalkRight
+            walkTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
             if (keySate.IsKeyDown(Keys.D))
             {
+                charSpriteIndex = 1;
                 velocity += new Vector2(1, 0);
+                if (walkTimer > walkThreshold)
+                {
+                    if (x1 >= 32 * 3)
+                    {
+                        x1 = 0;
+                        walkTimer = 0;
+                    }
+                    else
+                    {
+                        x1 += 32;
+                        walkTimer = 0;
+                    }
+                }
+
             }
+            #endregion
             if (velocity != Vector2.Zero)
             {
                 velocity.Normalize();
             }
+            #endregion
             if (keySate.IsKeyDown(Keys.P))
             {
                 //new Plants(vector pos);

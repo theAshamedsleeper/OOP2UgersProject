@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\thorb\\stuff\\Skole\\1.Semester\\OOP\\2 uger Gruppe Project\\Spil\\OOP2UgersProject\\2UgersProject Stardew Valley\\2UgersProject Stardew Valley\\2UgersProject Stardew Valley.csproj": {}
+    "D:\\Program Files (x86)\\Skole\\OOP\\2ugersPro\\OOP2UgersProject\\2UgersProject Stardew Valley\\2UgersProject Stardew Valley\\2UgersProject Stardew Valley.csproj": {}
   },
   "projects": {
-    "C:\\Users\\thorb\\stuff\\Skole\\1.Semester\\OOP\\2 uger Gruppe Project\\Spil\\OOP2UgersProject\\2UgersProject Stardew Valley\\2UgersProject Stardew Valley\\2UgersProject Stardew Valley.csproj": {
+    "D:\\Program Files (x86)\\Skole\\OOP\\2ugersPro\\OOP2UgersProject\\2UgersProject Stardew Valley\\2UgersProject Stardew Valley\\2UgersProject Stardew Valley.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\thorb\\stuff\\Skole\\1.Semester\\OOP\\2 uger Gruppe Project\\Spil\\OOP2UgersProject\\2UgersProject Stardew Valley\\2UgersProject Stardew Valley\\2UgersProject Stardew Valley.csproj",
+        "projectUniqueName": "D:\\Program Files (x86)\\Skole\\OOP\\2ugersPro\\OOP2UgersProject\\2UgersProject Stardew Valley\\2UgersProject Stardew Valley\\2UgersProject Stardew Valley.csproj",
         "projectName": "2UgersProject Stardew Valley",
-        "projectPath": "C:\\Users\\thorb\\stuff\\Skole\\1.Semester\\OOP\\2 uger Gruppe Project\\Spil\\OOP2UgersProject\\2UgersProject Stardew Valley\\2UgersProject Stardew Valley\\2UgersProject Stardew Valley.csproj",
+        "projectPath": "D:\\Program Files (x86)\\Skole\\OOP\\2ugersPro\\OOP2UgersProject\\2UgersProject Stardew Valley\\2UgersProject Stardew Valley\\2UgersProject Stardew Valley.csproj",
         "packagesPath": "C:\\Users\\thorb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\thorb\\stuff\\Skole\\1.Semester\\OOP\\2 uger Gruppe Project\\Spil\\OOP2UgersProject\\2UgersProject Stardew Valley\\2UgersProject Stardew Valley\\obj\\",
+        "outputPath": "D:\\Program Files (x86)\\Skole\\OOP\\2ugersPro\\OOP2UgersProject\\2UgersProject Stardew Valley\\2UgersProject Stardew Valley\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
