@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 
 namespace _2UgersProject_Stardew_Valley
 {
@@ -14,6 +15,16 @@ namespace _2UgersProject_Stardew_Valley
         protected float speed = 400f;
         protected Vector2 velocity;
 
+        #region IdleAnimation
+        protected Texture2D charaset;
+        protected Vector2 position1;
+        protected float timer;
+        protected int threshold;
+        protected Rectangle sourceRectangles;
+        protected byte previousAnimationIndex;
+        protected byte currentAnimationIndex;
+        #endregion
+
         public GameObjects(Vector2 pos)
         {
             position = pos;
@@ -22,18 +33,19 @@ namespace _2UgersProject_Stardew_Valley
         {
             get
             {
-                return sprite[(int)animationTime];
+                return charaset;
             }
         }
         private Vector2 spriteSize
         {
             get
             {
-                return new Vector2(currentSprite.Width * scale, currentSprite.Height * scale);
+                return new Vector2(sourceRectangles.Width * scale, sourceRectangles.Height * scale);
             }
         }
         public abstract void LoadContent(ContentManager content);
         public abstract void Update(GameTime gameTime);
+        /*
         protected void Animate(GameTime gameTime)
         {
             animationTime += (float)gameTime.ElapsedGameTime.TotalSeconds * animationSpeed;
@@ -42,7 +54,7 @@ namespace _2UgersProject_Stardew_Valley
             {
                 animationTime = 0;
             }
-        }
+        }*/
         protected void Move(GameTime gameTime)
         {
             float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
@@ -53,16 +65,17 @@ namespace _2UgersProject_Stardew_Valley
         public void Draw(SpriteBatch spriteBatch)
         {
             //player
-            Vector2 origin = new Vector2(currentSprite.Width / 2, currentSprite.Height / 2);
-            spriteBatch.Draw(sprite[(int)animationTime],//what to draw
+            Vector2 origin = new Vector2(sourceRectangles.Width / 2, sourceRectangles.Height / 2);
+            spriteBatch.Draw(charaset,//what to draw
                 position,//place to draw it
-                null,//rectangle
+                sourceRectangles,//rectangle
                 Color.White,//color of player
                 0f, //Rotation of player
                 origin,//Orgin Point
                 scale,//How big is the player
                 SpriteEffects.None,//effects
-                0f);//Layer            
+                0f);//Layer
+            spriteBatch.Draw(charaset, position1, Color.White);
         }
         public Rectangle GetCollisionBox
         {
