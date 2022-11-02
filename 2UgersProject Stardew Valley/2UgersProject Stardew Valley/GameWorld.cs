@@ -17,8 +17,8 @@ namespace _2UgersProject_Stardew_Valley
         private SpriteBatch _spriteBatch;
         private static Vector2 screenSize;
         private Texture2D grass_terrain;
+        private Texture2D grass2_terrain;
         private Texture2D texture_terrain;
-        private Rectangle terainRec;
         private List<GameObjects> gameObjects = new List<GameObjects>();
         private static List<GameObjects> gameObjectsToAdd = new List<GameObjects>();
         private float worldScale = 1.875f;//2.4f så passer den i width
@@ -35,7 +35,7 @@ namespace _2UgersProject_Stardew_Valley
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
+            Terrain.Give_Terrain();
             base.Initialize();
         }
 
@@ -43,8 +43,8 @@ namespace _2UgersProject_Stardew_Valley
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             grass_terrain = Content.Load<Texture2D>("pixil-frame-0");
+            grass2_terrain = Content.Load<Texture2D>("pixilart-drawing_1");
 
-           
             // TODO: use this.Content to load your game content here
         }
 
@@ -68,8 +68,11 @@ namespace _2UgersProject_Stardew_Valley
             {
                 switch (Terrain.Which_Terrain(gx, gy))
                 {
-                    case int n when (n == 0 || n == 1):
+                    case int n when (n == 0):
                         texture_terrain = grass_terrain;
+                        break;
+                    case int n when (n == 1):
+                        texture_terrain = grass2_terrain;
                         break;
                 }
                 _spriteBatch.Draw(texture_terrain,//what to draw
