@@ -102,6 +102,14 @@ namespace _2UgersProject_Stardew_Valley
 
         }
         #region getinfo
+        /// <summary>
+        /// method to change a tile, takes the x,y coord and the tile wanted to change into.
+        /// it will then check if the tile is within the amount of tiles useable, if yes,
+        /// it will find where in the array its changing the value, and then change it.
+        /// </summary>
+        /// <param name="x"> x coordinate </param>
+        /// <param name="y"> y coordinate </param>
+        /// <param name="z"> the value tile wanted to be changed to </param>
         public static void Terrain_Change(float x, float y, int z)
         {
             int x_mod = 0;
@@ -126,6 +134,12 @@ namespace _2UgersProject_Stardew_Valley
             }
 
         }
+        /// <summary>
+        /// a method to see which terrain a given input is. 
+        /// </summary>
+        /// <param name="x"> x coord </param>
+        /// <param name="y"> y coord </param>
+        /// <returns></returns>
         public static int Which_Terrain(float x, float y)
         {
             // Makes input applicable for sprite size.

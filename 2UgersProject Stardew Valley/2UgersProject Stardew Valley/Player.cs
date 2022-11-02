@@ -74,6 +74,10 @@ namespace _2UgersProject_Stardew_Valley
             {
                 velocity.Normalize();
             }
+            if (keySate.IsKeyDown(Keys.P))
+            {
+                //new Plants(vector pos);
+            }
         }
         private void Eat()
         {
