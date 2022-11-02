@@ -99,3 +99,8 @@ C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProje
 C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\IdleSpriteSheet.xnb
 C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixil-frame-2.xnb
 C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixil-frame-3.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixilart-frames_4\pixil-frame-0.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixilart-frames_4\pixil-frame-1.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixilart-frames_4\pixil-frame-2.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixilart-frames_4\pixil-frame-3.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixilart-frames_4\pixil-frame-4.xnb
