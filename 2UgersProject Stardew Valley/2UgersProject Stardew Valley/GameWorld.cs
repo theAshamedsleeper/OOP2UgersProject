@@ -1,10 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework.Media;
 using System.Collections.Generic;
-using static System.Formats.Asn1.AsnWriter;
 
 
 namespace _2UgersProject_Stardew_Valley
@@ -18,7 +15,6 @@ namespace _2UgersProject_Stardew_Valley
         private static Vector2 screenSize;
         private Texture2D grass_terrain;
         private Texture2D texture_terrain;
-        private Rectangle terainRec;
         private List<GameObjects> gameObjects = new List<GameObjects>();
         private static List<GameObjects> gameObjectsToAdd = new List<GameObjects>();
         private float worldScale = 1.875f;//2.4f så passer den i width
@@ -35,6 +31,7 @@ namespace _2UgersProject_Stardew_Valley
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            gameObjects.Add(new Player(new Vector2(400, 250)));
 
             base.Initialize();
         }
@@ -43,8 +40,13 @@ namespace _2UgersProject_Stardew_Valley
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             grass_terrain = Content.Load<Texture2D>("pixil-frame-0");
+            //player
+            for (int i = 0; i < gameObjects.Count; i++)
+            {
+                gameObjects[i].LoadContent(Content);
+            }
 
-           
+
             // TODO: use this.Content to load your game content here
         }
 
@@ -52,7 +54,10 @@ namespace _2UgersProject_Stardew_Valley
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-
+            for (int i = 0; i < gameObjects.Count; i++)
+            {
+                gameObjects[i].Update(gameTime);
+            }
             // TODO: Add your update logic here
 
             base.Update(gameTime);
@@ -62,6 +67,7 @@ namespace _2UgersProject_Stardew_Valley
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
             _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
+            #region terain World
             float gx = 0f;
             float gy = 0f;
             for (int i = 0; i < terainBlockAmount; i++)
@@ -76,21 +82,28 @@ namespace _2UgersProject_Stardew_Valley
                 new Vector2(gx, gy),//place to draw it
                 null,//rectangle
                 Color.White,//color of player
-               0f, //Rotation of player
+                0f, //Rotation of player
                 Vector2.Zero,//Orgin Point
                 worldScale,//How big is the player
                 SpriteEffects.None,//effects
-                0f);//Layer 
-                if (gx >= 1920 - 32*worldScale)
+                1f);//Layer 
+                if (gx >= 1920 - 32 * worldScale)
                 {
                     gx = 0;
                     gy += 32f * worldScale;
-        }
+                }
                 else
                 {
-                    gx += 32f*worldScale;
+                    gx += 32f * worldScale;
                 }
             }
+            #endregion
+            #region Player
+            foreach (GameObjects go in gameObjects)
+            {
+                go.Draw(_spriteBatch);
+            }
+            #endregion
             _spriteBatch.End();
 
             // TODO: Add your drawing code here

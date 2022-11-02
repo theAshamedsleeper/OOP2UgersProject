@@ -9,14 +9,14 @@ namespace _2UgersProject_Stardew_Valley
         protected Texture2D[] sprite;
         protected Vector2 position;
         protected float scale;
-        private float animationSpeed;
+        private float animationSpeed = 15f;
         private float animationTime;
-        protected float speed;
+        protected float speed = 400f;
         protected Vector2 velocity;
 
         public GameObjects(Vector2 pos)
         {
-
+            position = pos;
         }
         private Texture2D currentSprite
         {
@@ -36,15 +36,33 @@ namespace _2UgersProject_Stardew_Valley
         public abstract void Update(GameTime gameTime);
         protected void Animate(GameTime gameTime)
         {
+            animationTime += (float)gameTime.ElapsedGameTime.TotalSeconds * animationSpeed;
 
+            if (animationTime > sprite.Length)
+            {
+                animationTime = 0;
+            }
         }
-        protected void HandleInput(GameTime gameTime)
+        protected void Move(GameTime gameTime)
         {
+            float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
+            position += ((velocity * speed) * deltaTime);
         }
+
         public void Draw(SpriteBatch spriteBatch)
         {
-            
+            //player
+            Vector2 origin = new Vector2(currentSprite.Width / 2, currentSprite.Height / 2);
+            spriteBatch.Draw(sprite[(int)animationTime],//what to draw
+                position,//place to draw it
+                null,//rectangle
+                Color.White,//color of player
+                0f, //Rotation of player
+                origin,//Orgin Point
+                scale,//How big is the player
+                SpriteEffects.None,//effects
+                0f);//Layer            
         }
         public Rectangle GetCollisionBox
         {
