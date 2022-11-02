@@ -14,6 +14,10 @@ namespace _2UgersProject_Stardew_Valley
         private SpriteBatch _spriteBatch;
         private static Vector2 screenSize;
         private Texture2D grass_terrain;
+        private Texture2D grass2_terrain;
+        private Texture2D dirt_terrain;
+        private Texture2D dirt2_terrain;
+        private Texture2D hoe_terrain;
         private Texture2D texture_terrain;
         private List<GameObjects> gameObjects = new List<GameObjects>();
         private static List<GameObjects> gameObjectsToAdd = new List<GameObjects>();
@@ -32,7 +36,7 @@ namespace _2UgersProject_Stardew_Valley
         {
             // TODO: Add your initialization logic here
             gameObjects.Add(new Player(new Vector2(400, 250)));
-
+            Terrain.Give_Terrain();
             base.Initialize();
         }
 
@@ -40,6 +44,11 @@ namespace _2UgersProject_Stardew_Valley
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             grass_terrain = Content.Load<Texture2D>("pixil-frame-0");
+            grass2_terrain = Content.Load<Texture2D>("pixil-frame-1");
+            dirt_terrain = Content.Load<Texture2D>("pixil-frame-2");
+            dirt2_terrain = Content.Load<Texture2D>("pixil-frame-3");
+            hoe_terrain = Content.Load<Texture2D>("pixilart-drawing_1");
+
             //player
             for (int i = 0; i < gameObjects.Count; i++)
             {
@@ -72,12 +81,29 @@ namespace _2UgersProject_Stardew_Valley
             float gy = 0f;
             for (int i = 0; i < terainBlockAmount; i++)
             {
+                #region texture terrain switch
                 switch (Terrain.Which_Terrain(gx, gy))
                 {
-                    case int n when (n == 0 || n == 1):
+                    case 0:
                         texture_terrain = grass_terrain;
                         break;
+                    case 1:
+                        texture_terrain = grass2_terrain;
+                        break;
+                    case 2:
+                        texture_terrain = dirt_terrain;
+                        break;
+                    case 3:
+                        texture_terrain = dirt2_terrain;
+                        break;
+                    case 4:
+                        texture_terrain = hoe_terrain;
+                        break;
+                    case 5:
+                        texture_terrain = grass2_terrain;
+                        break;
                 }
+                #endregion
                 _spriteBatch.Draw(texture_terrain,//what to draw
                 new Vector2(gx, gy),//place to draw it
                 null,//rectangle

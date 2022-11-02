@@ -60,10 +60,10 @@ namespace _2UgersProject_Stardew_Valley
         {
             switch (y_1)
             {
-                case int n when (n >= 0 && n <= 8):
-                    return 0;
-                case int n when (n >= 9 && n <= 15 && n != 10):
-                    return 0;
+                case int n when (n >= 7 && n <=10):
+                    return 2;
+                case int n when (n >= 11 && n <= 15):
+                    return 3;
             }
             return 0;
         }
