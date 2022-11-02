@@ -21,9 +21,12 @@ namespace _2UgersProject_Stardew_Valley
         protected Rectangle sourceRectangles;
         //IdleAnim
         protected float idleTimer;
-        //Walk right anim
+        //Walk right/left anim
         protected int walkThreshold;
         protected float walkTimer;
+        //Walk forward/back anim
+        protected int forBackThreshold;
+
         #endregion
         public GameObjects(Vector2 pos)
         {

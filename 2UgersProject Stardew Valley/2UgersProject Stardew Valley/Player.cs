@@ -20,17 +20,35 @@ namespace _2UgersProject_Stardew_Valley
 
         public override void LoadContent(ContentManager content)
         {
-            charaset = new Texture2D[6];
+            charaset = new Texture2D[7];
             threshold = 40;//miliseconds
             #region Idle
             charaset[0] = content.Load<Texture2D>("Animation/IdleSpriteSheet");
             position1 = new Vector2(10, 10);
             idleTimer = 0;
             #endregion
-            #region WalkLeft
+            #region WalkRight
             charaset[1] = content.Load<Texture2D>("Animation/WalkAnim");
             position1 = new Vector2(10, 10);
             walkThreshold = 150;//miliseconds
+            walkTimer = 0;
+            #endregion
+            #region WalkLeft
+            charaset[2] = content.Load<Texture2D>("Animation/WalkAnim");
+            position1 = new Vector2(10, 10);
+            walkThreshold = 150;//miliseconds
+            walkTimer = 0;
+            #endregion
+            #region WalkBack
+            charaset[3] = content.Load<Texture2D>("Animation/WalkBackAnim");
+            position1 = new Vector2(10, 10);
+            forBackThreshold = 150;//miliseconds
+            walkTimer = 0;
+            #endregion
+            #region WalkForward
+            charaset[4] = content.Load<Texture2D>("Animation/WalkForwardAnim");
+            position1 = new Vector2(10, 10);
+            forBackThreshold = 150;//miliseconds
             walkTimer = 0;
             #endregion
 
@@ -49,10 +67,7 @@ namespace _2UgersProject_Stardew_Valley
             velocity = Vector2.Zero;
 
             KeyboardState keySate = Keyboard.GetState();
-            if (keySate.IsKeyDown(Keys.W))
-            {
-                velocity += new Vector2(0, -1);
-            }
+            walkTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
             //Runs Idle Animation
             #region Idle anim
             if (!keySate.IsKeyDown(Keys.S) && !keySate.IsKeyDown(Keys.W) && !keySate.IsKeyDown(Keys.A) && !keySate.IsKeyDown(Keys.D))
@@ -76,14 +91,68 @@ namespace _2UgersProject_Stardew_Valley
             }
             #endregion
             #region walk
+            #region WalkForward
+            if (keySate.IsKeyDown(Keys.W))
+            {
+                charSpriteIndex = 3;
+                velocity += new Vector2(0, -1);
+                if (walkTimer > forBackThreshold)
+                {
+
+                    if (x1 >= 32 * 3)
+                    {
+                        x1 = 0;
+                        walkTimer = 0;
+                    }
+                    else
+                    {
+                        x1 += 32;
+                        walkTimer = 0;
+                    }
+                }
+            }
+            #endregion
+            #region WalkBack
             if (keySate.IsKeyDown(Keys.S))
             {
+                charSpriteIndex = 4;
                 velocity += new Vector2(0, 1);
+                if (walkTimer > forBackThreshold)
+                {
+
+                    if (x1 >= 32 * 3)
+                    {
+                        x1 = 0;
+                        walkTimer = 0;
+                    }
+                    else
+                    {
+                        x1 += 32;
+                        walkTimer = 0;
+                    }
+                }
             }
+            #endregion
+            #region Walkleft
             if (keySate.IsKeyDown(Keys.A))
             {
+                charSpriteIndex = 1;
                 velocity += new Vector2(-1, 0);
+                if (walkTimer > walkThreshold)
+                {
+                    if (x1 >= 32 * 3)
+                    {
+                        x1 = 0;
+                        walkTimer = 0;
+                    }
+                    else
+                    {
+                        x1 += 32;
+                        walkTimer = 0;
+                    }
+                }
             }
+            #endregion
             #region WalkRight
             walkTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
             if (keySate.IsKeyDown(Keys.D))
@@ -103,7 +172,6 @@ namespace _2UgersProject_Stardew_Valley
                         walkTimer = 0;
                     }
                 }
-
             }
             #endregion
             if (velocity != Vector2.Zero)

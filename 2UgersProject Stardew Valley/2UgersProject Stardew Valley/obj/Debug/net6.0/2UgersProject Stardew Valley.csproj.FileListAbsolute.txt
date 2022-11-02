@@ -161,3 +161,5 @@ D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Starde
 D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Debug\net6.0\2UgersProject Stardew Valley.genruntimeconfig.cache
 D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Debug\net6.0\ref\2UgersProject Stardew Valley.dll
 D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\WalkAnim.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\WalkBackAnim.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\WalkForwardAnim.xnb
