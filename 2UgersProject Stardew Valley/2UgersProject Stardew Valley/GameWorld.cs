@@ -11,6 +11,8 @@ namespace _2UgersProject_Stardew_Valley
 {
     public class GameWorld : Game
     {
+        private float terainBlockAmount = 576f;
+
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
         private static Vector2 screenSize;
@@ -19,7 +21,7 @@ namespace _2UgersProject_Stardew_Valley
         private Rectangle terainRec;
         private List<GameObjects> gameObjects = new List<GameObjects>();
         private static List<GameObjects> gameObjectsToAdd = new List<GameObjects>();
-        private float worldScale = 2.3f;//error visable at 2.3f not if over
+        private float worldScale = 1.875f;//2.4f så passer den i width
         public GameWorld()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -62,7 +64,7 @@ namespace _2UgersProject_Stardew_Valley
             _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
             float gx = 0f;
             float gy = 0f;
-            for (int i = 0; i < 375; i++)
+            for (int i = 0; i < terainBlockAmount; i++)
             {
                 switch (Terrain.Which_Terrain(gx, gy))
                 {
