@@ -10,21 +10,24 @@ namespace _2UgersProject_Stardew_Valley
         protected Texture2D[] sprite;
         protected Vector2 position;
         protected float scale;
-        private float animationSpeed = 15f;
-        private float animationTime;
-        protected float speed = 400f;
+        protected float speed = 200f;
         protected Vector2 velocity;
 
-        #region IdleAnimation
-        protected Texture2D charaset;
+        #region Character attributes
+        protected byte charSpriteIndex=0;
+        protected Texture2D[] charaset;
         protected Vector2 position1;
-        protected float timer;
         protected int threshold;
         protected Rectangle sourceRectangles;
-        protected byte previousAnimationIndex;
-        protected byte currentAnimationIndex;
-        #endregion
+        //IdleAnim
+        protected float idleTimer;
+        //Walk right/left anim
+        protected int walkThreshold;
+        protected float walkTimer;
+        //Walk forward/back anim
+        protected int forBackThreshold;
 
+        #endregion
         public GameObjects(Vector2 pos)
         {
             position = pos;
@@ -33,7 +36,7 @@ namespace _2UgersProject_Stardew_Valley
         {
             get
             {
-                return charaset;
+                return charaset[charSpriteIndex];
             }
         }
         private Vector2 spriteSize
@@ -45,16 +48,7 @@ namespace _2UgersProject_Stardew_Valley
         }
         public abstract void LoadContent(ContentManager content);
         public abstract void Update(GameTime gameTime);
-        /*
-        protected void Animate(GameTime gameTime)
-        {
-            animationTime += (float)gameTime.ElapsedGameTime.TotalSeconds * animationSpeed;
-
-            if (animationTime > sprite.Length)
-            {
-                animationTime = 0;
-            }
-        }*/
+        
         protected void Move(GameTime gameTime)
         {
             float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
@@ -66,7 +60,7 @@ namespace _2UgersProject_Stardew_Valley
         {
             //player
             Vector2 origin = new Vector2(sourceRectangles.Width / 2, sourceRectangles.Height / 2);
-            spriteBatch.Draw(charaset,//what to draw
+            spriteBatch.Draw(charaset[charSpriteIndex],//what to draw
                 position,//place to draw it
                 sourceRectangles,//rectangle
                 Color.White,//color of player
@@ -75,7 +69,8 @@ namespace _2UgersProject_Stardew_Valley
                 scale,//How big is the player
                 SpriteEffects.None,//effects
                 0f);//Layer
-            spriteBatch.Draw(charaset, position1, Color.White);
+            //draws the sprite sheet for debugging
+            spriteBatch.Draw(charaset[charSpriteIndex], position1, Color.White);
         }
         public Rectangle GetCollisionBox
         {
