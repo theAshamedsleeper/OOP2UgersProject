@@ -214,7 +214,7 @@ namespace _2UgersProject_Stardew_Valley
             //RecBar[0] = energyBar | RecBar[2] = foodBar
             hunger -= (float)gameTime.ElapsedGameTime.TotalSeconds;
             energyRecBar[2].Height = (int)hunger;
-            if ((int)hunger <= energyRecBar[2].Height )
+            if ((int)hunger <= energyRecBar[2].Height *1f)
             {
                 energy -= (float)gameTime.ElapsedGameTime.TotalSeconds;
                 energyRecBar[0].Height = (int)energy;
