@@ -9,7 +9,6 @@ namespace _2UgersProject_Stardew_Valley
     {
         private float energy;
         private float hunger;
-        private float moveTimer;
         private int x1 = 0;
 
 
