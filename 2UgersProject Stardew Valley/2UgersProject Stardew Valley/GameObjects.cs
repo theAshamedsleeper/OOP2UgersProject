@@ -8,6 +8,8 @@ namespace _2UgersProject_Stardew_Valley
     public abstract class GameObjects
     {
         protected Texture2D[] sprite;
+        protected Texture2D[] barSprite;
+        protected Rectangle[] energyRecBar = new Rectangle[5];
         protected Vector2 position;
         protected float scale;
         protected float speed = 200f;
@@ -16,7 +18,7 @@ namespace _2UgersProject_Stardew_Valley
         #region Character attributes
         protected byte charSpriteIndex=0;
         protected Texture2D[] charaset;
-        protected Vector2 position1;
+        protected Vector2[] position1 = new Vector2[5];
         protected int threshold;
         protected Rectangle sourceRectangles;
         //IdleAnim
@@ -64,13 +66,56 @@ namespace _2UgersProject_Stardew_Valley
                 position,//place to draw it
                 sourceRectangles,//rectangle
                 Color.White,//color of player
-                0f, //Rotation of player
+                0f, //Rotation of player in radianer
                 origin,//Orgin Point
                 scale,//How big is the player
                 SpriteEffects.None,//effects
-                0f);//Layer
+                0f);//Layer higher the number further back it is 
             //draws the sprite sheet for debugging
-            spriteBatch.Draw(charaset[charSpriteIndex], position1, Color.White);
+            spriteBatch.Draw(charaset[charSpriteIndex], position1[0], Color.White);
+            #region Draw Food and energy
+            //draw background color for energyBar
+            spriteBatch.Draw(barSprite[1],
+                position1[2],
+                energyRecBar[1],
+                Color.White,
+                (float)Math.PI,
+                new Vector2(0,0),
+                scale,
+                SpriteEffects.None,
+                0.2f); 
+            //draw background color for foodbar
+            spriteBatch.Draw(barSprite[3],
+                position1[4],
+                energyRecBar[3],
+                Color.White,
+                (float)Math.PI,
+                new Vector2(0,0),
+                scale,
+                SpriteEffects.None,
+                0.2f); 
+            //draw in foodBar
+            spriteBatch.Draw(barSprite[2],
+                position1[3],
+                energyRecBar[2],
+                Color.White,
+                (float)Math.PI,
+                new Vector2(0,0),
+                scale,
+                SpriteEffects.None,
+                0f);
+
+            //draws in energy bar
+            spriteBatch.Draw(barSprite[0],
+                position1[1],
+                energyRecBar[0],
+                Color.White,
+                (float)Math.PI,
+                new Vector2(0,0),
+                scale,
+                SpriteEffects.None,
+                0f);
+            #endregion
         }
         public Rectangle GetCollisionBox
         {

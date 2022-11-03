@@ -12,9 +12,11 @@ namespace _2UgersProject_Stardew_Valley
         private int x1 = 0;
 
 
+
+
         public Player(Vector2 pos) : base(pos)
         {
-            scale = 2f;//1.875f for nomral scale
+            scale = 2f;//scale of the player
         }
 
         public override void LoadContent(ContentManager content)
@@ -23,33 +25,48 @@ namespace _2UgersProject_Stardew_Valley
             #region Idle
             threshold = 40;//miliseconds for each image on spritesheet
             charaset[0] = content.Load<Texture2D>("Animation/IdleSpriteSheet");
-            position1 = new Vector2(10, 10);
+            position1[0] = new Vector2(10, 10);
             idleTimer = 0;
             #endregion
             #region WalkRight
             charaset[1] = content.Load<Texture2D>("Animation/WalkAnim");
-            position1 = new Vector2(10, 10);
             walkThreshold = 350;//miliseconds
             walkTimer = 0;
             #endregion
             #region WalkLeft
             charaset[2] = content.Load<Texture2D>("Animation/Walk Left");
-            position1 = new Vector2(10, 10);
             walkThreshold = 350;//miliseconds for each image on spritesheet
             walkTimer = 0;
             #endregion
             #region WalkBack
             charaset[3] = content.Load<Texture2D>("Animation/WalkBackAnim");
-            position1 = new Vector2(10, 10);
             forBackThreshold = 350;//miliseconds for each image on spritesheet
             walkTimer = 0;
             #endregion
             #region WalkForward
             charaset[4] = content.Load<Texture2D>("Animation/WalkForwardAnim");
-            position1 = new Vector2(10, 10);
             forBackThreshold = 350;//miliseconds for each image on spritesheet
             walkTimer = 0;
             #endregion
+            #region Load Food and energy bars
+            barSprite = new Texture2D[5];
+            barSprite[0] = content.Load<Texture2D>("Sprites/FoodEnergyBarSprite/EnergyBar");//load energybar sprite
+            energyRecBar[0] = new Rectangle(0, 0, 8, 64);//size of energybar
+            position1[1] = new Vector2(50, 200);//position of energy sprite
+            energyRecBar[1] = new Rectangle(0, 0, 12, 68);//size of energybackgroundbar
+            barSprite[1] = content.Load<Texture2D>("Sprites/FoodEnergyBarSprite/BackgroundBar");//loader backgroundbar sprite
+            position1[2] = new Vector2(54, 204);//position of energybackground
+            barSprite[2] = content.Load<Texture2D>("Sprites/FoodEnergyBarSprite/foodBar");//loader foodBar sprite
+            position1[3] = new Vector2(80, 200);//position af foodBar
+            energyRecBar[2] = new Rectangle(0, 0, 8, 64);//size of foodBar
+            barSprite[3] = content.Load<Texture2D>("Sprites/FoodEnergyBarSprite/BackgroundBar");//loader backgroundbar sprite
+            position1[4] = new Vector2(84, 204);//position af foodbackgroundBar 
+            energyRecBar[3] = new Rectangle(0, 0, 12, 68);//size of foodbackgroundBar
+            #endregion
+
+
+            energy = energyRecBar[0].Height;
+            hunger = energyRecBar[2].Height;
 
         }
         public override void Update(GameTime gameTime)
@@ -57,10 +74,15 @@ namespace _2UgersProject_Stardew_Valley
             sourceRectangles = new Rectangle(x1, 0, 32, 64);
 
             Move(gameTime);
-            //Animate(gameTime);
             HandleInput(gameTime);
+            HandleEnergyAndFood(gameTime);
+
 
         }
+        /// <summary>
+        /// Handles the events about walking and doing stuff in the GameWorld
+        /// </summary>
+        /// <param name="gameTime"></param>
         private void HandleInput(GameTime gameTime)
         {
             velocity = Vector2.Zero;
@@ -185,6 +207,18 @@ namespace _2UgersProject_Stardew_Valley
             if (keySate.IsKeyDown(Keys.P))
             {
                 //new Plants(vector pos);
+            }
+        }
+        private void HandleEnergyAndFood(GameTime gameTime)
+        {
+            //RecBar[0] = energyBar | RecBar[2] = foodBar
+            hunger -= (float)gameTime.ElapsedGameTime.TotalSeconds;
+            energyRecBar[2].Height = (int)hunger;
+            if ((int)hunger <= energyRecBar[2].Height )
+            {
+                energy -= (float)gameTime.ElapsedGameTime.TotalSeconds;
+                energyRecBar[0].Height = (int)energy;
+
             }
         }
         private void Eat()
