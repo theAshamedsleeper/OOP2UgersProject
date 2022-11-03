@@ -115,8 +115,8 @@ namespace _2UgersProject_Stardew_Valley
             int x_mod = 0;
             if (0 <= z && z < 4)
             {
-                float x_1 = x - x % 1;
-                float y_1 = y - y % 1;
+                float y_1 = (((y / scale) - ((y / scale) % 32f)) / 32f);
+                float x_1 = (((x / scale) - ((x / scale) % 32f)) / 32f);
                 for (int i = 0; i < height; i++)
                 {
                     if (tiles_y[i * width] == y_1)

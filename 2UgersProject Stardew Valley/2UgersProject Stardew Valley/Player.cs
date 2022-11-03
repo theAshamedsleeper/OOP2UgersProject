@@ -14,14 +14,14 @@ namespace _2UgersProject_Stardew_Valley
 
         public Player(Vector2 pos) : base(pos)
         {
-            scale = 5f;//1.875f for nomral scale
+            scale = 2f;//1.875f for nomral scale
         }
 
         public override void LoadContent(ContentManager content)
         {
             charaset = new Texture2D[7];
-            threshold = 40;//miliseconds
             #region Idle
+            threshold = 40;//miliseconds for each image on spritesheet
             charaset[0] = content.Load<Texture2D>("Animation/IdleSpriteSheet");
             position1 = new Vector2(10, 10);
             idleTimer = 0;
@@ -29,25 +29,25 @@ namespace _2UgersProject_Stardew_Valley
             #region WalkRight
             charaset[1] = content.Load<Texture2D>("Animation/WalkAnim");
             position1 = new Vector2(10, 10);
-            walkThreshold = 150;//miliseconds
+            walkThreshold = 350;//miliseconds
             walkTimer = 0;
             #endregion
             #region WalkLeft
-            charaset[2] = content.Load<Texture2D>("Animation/WalkAnim");
+            charaset[2] = content.Load<Texture2D>("Animation/Walk Left");
             position1 = new Vector2(10, 10);
-            walkThreshold = 150;//miliseconds
+            walkThreshold = 350;//miliseconds for each image on spritesheet
             walkTimer = 0;
             #endregion
             #region WalkBack
             charaset[3] = content.Load<Texture2D>("Animation/WalkBackAnim");
             position1 = new Vector2(10, 10);
-            forBackThreshold = 150;//miliseconds
+            forBackThreshold = 350;//miliseconds for each image on spritesheet
             walkTimer = 0;
             #endregion
             #region WalkForward
             charaset[4] = content.Load<Texture2D>("Animation/WalkForwardAnim");
             position1 = new Vector2(10, 10);
-            forBackThreshold = 150;//miliseconds
+            forBackThreshold = 350;//miliseconds for each image on spritesheet
             walkTimer = 0;
             #endregion
 
@@ -67,6 +67,10 @@ namespace _2UgersProject_Stardew_Valley
 
             KeyboardState keySate = Keyboard.GetState();
             walkTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+            if (keySate.IsKeyDown(Keys.E))
+            {
+                Terrain.Terrain_Change(position.X, position.Y, 3);
+            }
             //Runs Idle Animation
             #region Idle anim
             if (!keySate.IsKeyDown(Keys.S) && !keySate.IsKeyDown(Keys.W) && !keySate.IsKeyDown(Keys.A) && !keySate.IsKeyDown(Keys.D))
@@ -135,7 +139,7 @@ namespace _2UgersProject_Stardew_Valley
             #region Walkleft
             if (keySate.IsKeyDown(Keys.A))
             {
-                charSpriteIndex = 1;
+                charSpriteIndex = 2;
                 velocity += new Vector2(-1, 0);
                 if (walkTimer > walkThreshold)
                 {
