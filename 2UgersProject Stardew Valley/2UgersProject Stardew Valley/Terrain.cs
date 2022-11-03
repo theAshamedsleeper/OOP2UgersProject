@@ -14,29 +14,37 @@ namespace _2UgersProject_Stardew_Valley
     internal static class Terrain
 {
 
-        private static float animation_Speed = 0;
-        private static float animation_Time = 0;
         private static int width = 1024 / 32;
         private static int height = 576 / 32;
         private static int x_1 = 0;
         private static int y_1 = 0;
         private static int z_1 = 0;
+        private static float scale = 1.875f;
         private static int[] tiles_x = new int[width * height];
         private static int[] tiles_y = new int[width * height];
         private static int[] tiles_t = new int[width * height];
         #region terrain making
+        /// <summary>
+        /// a method to give value to 3 arrays, so we can more easily allocate which is dirt grass or hoed dirt.
+        /// it will give the x and y values, and check if those coordinates are dirt or grass.
+        /// it has 3 arrays one for x, y and terrain type, the terrain type is chosen with a number.
+        /// this way we will be able to pin point a location, 
+        /// we believe this will be more effective than an object for each tile.
+        /// </summary>
         public static void Give_Terrain()
         {
-            for (int i_2 = 0; i_2 < 15*25; i_2++)
+            for (int i_2 = 0; i_2 < width*height; i_2++)
             {
-                // function/method to see if the given x and y have a predetermined brik value
+                // function/method to see if the given x and y coordinates have a predetermined value for the terrain
                 z_1 = start_terrain(x_1, y_1);
+                // giving the values to the arrays
                 tiles_x[i_2] = x_1;
                 tiles_y[i_2] = y_1;
                 tiles_t[i_2] = z_1;
-                if (x_1 == width)
+                // updating the coordinates
+                if (x_1 == width - 1)
                 {
-                    x_1 = 1;
+                    x_1 = 0;
                     y_1 += 1;
                 }
                 else
@@ -45,14 +53,17 @@ namespace _2UgersProject_Stardew_Valley
                 }
             }
         }
+        // our start terrain method,
+        // it will say which coordinates should return dirt or grass,
+        // with what we wish the starting land should look like
         static int start_terrain(int x_1, int y_1)
         {
             switch (y_1)
             {
-                case int n when (n >= 1 && n <= 8):
-                    return 1;
-                case int n when (n >= 9 && n <= 15):
-                    return 0;
+                case int n when (n >= 7 && n <=10):
+                    return 2;
+                case int n when (n >= 11 && n <= 15):
+                    return 3;
             }
             return 0;
         }
@@ -91,21 +102,55 @@ namespace _2UgersProject_Stardew_Valley
 
         }
         #region getinfo
-        public static int X
+        /// <summary>
+        /// method to change a tile, takes the x,y coord and the tile wanted to change into.
+        /// it will then check if the tile is within the amount of tiles useable, if yes,
+        /// it will find where in the array its changing the value, and then change it.
+        /// </summary>
+        /// <param name="x"> x coordinate </param>
+        /// <param name="y"> y coordinate </param>
+        /// <param name="z"> the value tile wanted to be changed to </param>
+        public static void Terrain_Change(float x, float y, int z)
         {
-            get { return tiles_x[0]; }
+            int x_mod = 0;
+            if (0 <= z && z < 4)
+            {
+                float y_1 = (((y / scale) - ((y / scale) % 32f)) / 32f);
+                float x_1 = (((x / scale) - ((x / scale) % 32f)) / 32f);
+                for (int i = 0; i < height; i++)
+                {
+                    if (tiles_y[i * width] == y_1)
+                    {
+                        x_mod = i;
+                    }
+                }
+                for (int i = 0; i < width; i++)
+                {
+                    if (tiles_x[(x_mod * width) + i] == x_1)
+                    {
+                        tiles_t[(x_mod * width) + i] = z;
+                    }
+                }
+            }
+
         }
+        /// <summary>
+        /// a method to see which terrain a given input is. 
+        /// </summary>
+        /// <param name="x"> x coord </param>
+        /// <param name="y"> y coord </param>
+        /// <returns></returns>
         public static int Which_Terrain(float x, float y)
         {
             // Makes input applicable for sprite size.
-            float y_1 = (y - (y % 32f))/32f;
-            float x_1 = (x - (x % 32f))/32f;
+            float y_1 = (((y / scale) - ((y / scale) % 32f))/32f);
+            float x_1 = (((x / scale) - ((x / scale) % 32f))/32f);
             // xmod * width is basically the location of our y pos in y array
             int x_mod = 0;
             // locate location of y pos in y array
             for (int i = 0; i < height; i++)
             {
-                if (tiles_y[i * width] == y_1)
+                if (tiles_y[i * width + 1] == y_1)
                 {
                     x_mod = i;
                 }

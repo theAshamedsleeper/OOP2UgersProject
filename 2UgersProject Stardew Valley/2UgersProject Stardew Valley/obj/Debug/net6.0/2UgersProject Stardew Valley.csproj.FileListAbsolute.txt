@@ -52,30 +52,118 @@ C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProje
 C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Debug\net6.0\ref\2UgersProject Stardew Valley.dll
 C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixil-frame-0.xnb
 C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixil-frame-1.xnb
-C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixil-frame-0.xnb
-C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixil-frame-1.xnb
-C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\2UgersProject Stardew Valley.exe
-C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\2UgersProject Stardew Valley.deps.json
-C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\2UgersProject Stardew Valley.runtimeconfig.json
-C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\2UgersProject Stardew Valley.dll
-C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\2UgersProject Stardew Valley.pdb
-C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\MonoGame.Framework.dll
-C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\runtimes\linux-x64\native\libSDL2-2.0.so.0
-C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\runtimes\linux-x64\native\libopenal.so.1
-C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\runtimes\osx\native\libSDL2.dylib
-C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\runtimes\osx\native\libopenal.1.dylib
-C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\runtimes\win-x64\native\SDL2.dll
-C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\runtimes\win-x64\native\soft_oal.dll
-C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\runtimes\win-x86\native\SDL2.dll
-C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\runtimes\win-x86\native\soft_oal.dll
-C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Debug\net6.0\2UgersProject Stardew Valley.csproj.AssemblyReference.cache
-C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Debug\net6.0\2UgersProject Stardew Valley.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Debug\net6.0\2UgersProject Stardew Valley.AssemblyInfoInputs.cache
-C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Debug\net6.0\2UgersProject Stardew Valley.AssemblyInfo.cs
-C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Debug\net6.0\2UgersProject Stardew Valley.csproj.CoreCompileInputs.cache
-C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Debug\net6.0\2UgersProject Stardew Valley.csproj.CopyComplete
-C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Debug\net6.0\2UgersProject Stardew Valley.dll
-C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Debug\net6.0\refint\2UgersProject Stardew Valley.dll
-C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Debug\net6.0\2UgersProject Stardew Valley.pdb
-C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Debug\net6.0\2UgersProject Stardew Valley.genruntimeconfig.cache
-C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Debug\net6.0\ref\2UgersProject Stardew Valley.dll
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-0.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-1.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-10.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-11.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-12.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-13.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-14.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-15.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-16.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-17.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-18.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-19.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-2.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-3.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-4.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-5.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-6.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-7.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-8.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-9.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixilart-drawing_1.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-0.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-1.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-10.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-11.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-12.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-13.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-14.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-15.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-16.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-17.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-18.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-19.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-2.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-3.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-4.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-5.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-6.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-7.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-8.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-9.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixil-frame-2.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixil-frame-3.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixilart-drawing_1.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\IdleSpriteSheet.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixil-frame-2.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixil-frame-3.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixilart-frames_4\pixil-frame-0.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixilart-frames_4\pixil-frame-1.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixilart-frames_4\pixil-frame-2.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixilart-frames_4\pixil-frame-3.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixilart-frames_4\pixil-frame-4.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\IdleSpriteSheet.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-0.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-1.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-10.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-11.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-12.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-13.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-14.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-15.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-16.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-17.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-18.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-19.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-2.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-3.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-4.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-5.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-6.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-7.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-8.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-9.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixil-frame-0.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixil-frame-1.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixil-frame-2.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixil-frame-3.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixilart-drawing_1.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixilart-frames_4\pixil-frame-0.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixilart-frames_4\pixil-frame-1.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixilart-frames_4\pixil-frame-2.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixilart-frames_4\pixil-frame-3.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixilart-frames_4\pixil-frame-4.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\2UgersProject Stardew Valley.exe
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\2UgersProject Stardew Valley.deps.json
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\2UgersProject Stardew Valley.runtimeconfig.json
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\2UgersProject Stardew Valley.dll
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\2UgersProject Stardew Valley.pdb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\MonoGame.Framework.dll
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\runtimes\linux-x64\native\libSDL2-2.0.so.0
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\runtimes\linux-x64\native\libopenal.so.1
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\runtimes\osx\native\libSDL2.dylib
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\runtimes\osx\native\libopenal.1.dylib
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\runtimes\win-x64\native\SDL2.dll
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\runtimes\win-x64\native\soft_oal.dll
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\runtimes\win-x86\native\SDL2.dll
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\runtimes\win-x86\native\soft_oal.dll
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Debug\net6.0\2UgersProject Stardew Valley.csproj.AssemblyReference.cache
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Debug\net6.0\2UgersProject Stardew Valley.GeneratedMSBuildEditorConfig.editorconfig
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Debug\net6.0\2UgersProject Stardew Valley.AssemblyInfoInputs.cache
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Debug\net6.0\2UgersProject Stardew Valley.AssemblyInfo.cs
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Debug\net6.0\2UgersProject Stardew Valley.csproj.CoreCompileInputs.cache
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Debug\net6.0\2UgersProject Stardew Valley.csproj.CopyComplete
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Debug\net6.0\2UgersProject Stardew Valley.dll
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Debug\net6.0\refint\2UgersProject Stardew Valley.dll
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Debug\net6.0\2UgersProject Stardew Valley.pdb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Debug\net6.0\2UgersProject Stardew Valley.genruntimeconfig.cache
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Debug\net6.0\ref\2UgersProject Stardew Valley.dll
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\WalkAnim.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\WalkBackAnim.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\WalkForwardAnim.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\WalkAnim.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\WalkBackAnim.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\WalkForwardAnim.xnb
+C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Walk Left.xnb
