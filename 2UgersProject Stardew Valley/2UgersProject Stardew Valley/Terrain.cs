@@ -19,7 +19,7 @@ namespace _2UgersProject_Stardew_Valley
         private static int x_1 = 0;
         private static int y_1 = 0;
         private static int z_1 = 0;
-        private static int terrain_amount = 5; 
+        private static int terrain_amount = 6; 
         private static float scale = 1.875f;
         private static int[] tiles_x = new int[width * height];
         private static int[] tiles_y = new int[width * height];
@@ -116,8 +116,8 @@ namespace _2UgersProject_Stardew_Valley
             int x_mod = 0;
             if (0 <= z && z <= terrain_amount)
             {
-                float x_1 = x - x % 1;
-                float y_1 = y - y % 1;
+                float y_1 = (((y / scale) - ((y / scale) % 32f)) / 32f);
+                float x_1 = (((x / scale) - ((x / scale) % 32f)) / 32f);
                 for (int i = 0; i < height; i++)
                 {
                     if (tiles_y[i * width] == y_1)
