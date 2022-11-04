@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
 using System.Collections.Generic;
 
 
@@ -9,7 +10,6 @@ namespace _2UgersProject_Stardew_Valley
     public class GameWorld : Game
     {
         private float terainBlockAmount = 576f;
-
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
         private static Vector2 screenSize;
@@ -19,9 +19,12 @@ namespace _2UgersProject_Stardew_Valley
         private Texture2D dirt2_terrain;
         private Texture2D hoe_terrain;
         private Texture2D texture_terrain;
+        private Texture2D button_inv;
+        private Texture2D button_baground;
         private List<GameObjects> gameObjects = new List<GameObjects>();
         private static List<GameObjects> gameObjectsToAdd = new List<GameObjects>();
         private float worldScale = 1.875f;//2.4f så passer den i width
+        private bool inv = false;
         public GameWorld()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -37,6 +40,7 @@ namespace _2UgersProject_Stardew_Valley
             // TODO: Add your initialization logic here
             gameObjects.Add(new Player(new Vector2(400, 250)));
             Terrain.Give_Terrain();
+            Inventory.Start_Inv();
             base.Initialize();
         }
 
@@ -48,7 +52,8 @@ namespace _2UgersProject_Stardew_Valley
             dirt_terrain = Content.Load<Texture2D>("pixil-frame-2");
             dirt2_terrain = Content.Load<Texture2D>("pixil-frame-3");
             hoe_terrain = Content.Load<Texture2D>("pixilart-drawing_1");
-
+            button_inv = Content.Load<Texture2D>("CtYf6HCWIAEwvF9_2");
+            button_baground = Content.Load<Texture2D>("CtYf6HCWIAEwvF9");
             //player
             for (int i = 0; i < gameObjects.Count; i++)
             {
@@ -67,11 +72,37 @@ namespace _2UgersProject_Stardew_Valley
             {
                 gameObjects[i].Update(gameTime);
             }
+            #region inventory
+            if (Keyboard.GetState().IsKeyDown(Keys.I))
+            {
+                float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
+                if (inv == true)
+                {
+                    if (Inventory.timer(deltaTime) >= 0.1f)
+                    {
+                        Inventory.start_timer_closed();
+                        inv = false;
+                    }
+                }
+                else
+                {
+                    if(Inventory.timer_closed(deltaTime) >= 0.1f)
+                    {
+                        Inventory.start_timer();
+                        inv = true;
+                    }
+                }
+            }
+            if (inv == true)
+            {
+                var mouseState = Mouse.GetState();
+                var mousePosition = new Point(mouseState.X, mouseState.Y);
+                Inventory.update(mousePosition, button_baground.Width*worldScale);
+            }
+            #endregion
             // TODO: Add your update logic here
-
             base.Update(gameTime);
         }
-
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
@@ -128,6 +159,39 @@ namespace _2UgersProject_Stardew_Valley
             foreach (GameObjects go in gameObjects)
             {
                 go.Draw(_spriteBatch);
+            }
+            #endregion
+            #region buttons
+            if (inv == true)
+            {
+                _spriteBatch.Draw(button_baground,//what to draw
+                    new Vector2(Inventory.Inventory_x, Inventory.Inventory_y),//place to draw it
+                    null,//rectangle
+                    Color.White,//color 
+                    0f, //Rotation
+                    Vector2.Zero,//Orgin Point
+                    worldScale,//How big
+                    SpriteEffects.None,//effects
+                    0f);//Layer
+                for (int i = 0; i < Inventory.But_y.Length; i++)
+                {
+                    Color button_color = Color.White;
+                    int bx = Inventory.But_x[i];
+                    int by = Inventory.But_y[i];
+                    if (Inventory.Butten_higlight - 1 == i)
+                    {
+                        button_color = Color.Black;
+                    }
+                    _spriteBatch.Draw(button_inv,//what to draw
+                    new Vector2(Inventory.Inventory_x + bx, Inventory.Inventory_y+ by),//place to draw it
+                    null,//rectangle
+                    button_color,//color 
+                    0f, //Rotation
+                    Vector2.Zero,//Orgin Point
+                    worldScale,//How big 
+                    SpriteEffects.None,//effects
+                    0f);//Layer
+                }
             }
             #endregion
             _spriteBatch.End();

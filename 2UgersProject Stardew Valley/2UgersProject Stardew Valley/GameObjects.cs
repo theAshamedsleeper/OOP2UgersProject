@@ -14,6 +14,7 @@ namespace _2UgersProject_Stardew_Valley
         protected float scale;
         protected float speed = 200f;
         protected Vector2 velocity;
+        public Vector2 pos_p { get { return position; } }
 
         #region Character attributes
         protected byte charSpriteIndex=0;
