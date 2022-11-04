@@ -11,7 +11,6 @@ namespace _2UgersProject_Stardew_Valley
         private float hunger;
         private int x1 = 0;
 
-
         public Player(Vector2 pos) : base(pos)
         {
             scale = 5f;//1.875f for nomral scale
@@ -35,7 +34,7 @@ namespace _2UgersProject_Stardew_Valley
             #region WalkLeft
             charaset[2] = content.Load<Texture2D>("Animation/WalkAnim");
             position1 = new Vector2(10, 10);
-            walkThreshold = 150;//miliseconds
+            walkThreshold = 350;//miliseconds
             walkTimer = 0;
             #endregion
             #region WalkBack

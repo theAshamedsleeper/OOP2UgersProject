@@ -19,6 +19,7 @@ namespace _2UgersProject_Stardew_Valley
         private static int x_1 = 0;
         private static int y_1 = 0;
         private static int z_1 = 0;
+        private static int terrain_amount = 5; 
         private static float scale = 1.875f;
         private static int[] tiles_x = new int[width * height];
         private static int[] tiles_y = new int[width * height];
@@ -113,7 +114,7 @@ namespace _2UgersProject_Stardew_Valley
         public static void Terrain_Change(float x, float y, int z)
         {
             int x_mod = 0;
-            if (0 <= z && z < 4)
+            if (0 <= z && z <= terrain_amount)
             {
                 float x_1 = x - x % 1;
                 float y_1 = y - y % 1;
