@@ -10,8 +10,23 @@ namespace _2UgersProject_Stardew_Valley
         private float energy;
         private float hunger;
         private int x1 = 0;
-
-
+        private bool canMove = true;//Makes it so you cant move during an animation
+        private float foodDecrease = 2f;//Increase to slowdown food decrease
+        private float idleTimer;
+        //Walk right/left anim
+        private int walkThreshold;
+        private float walkTimer;
+        //Walk forward/back anim
+        private int forBackThreshold;
+        //Hoeing Ground
+        private int Hoeingthreshold;
+        private float HoeingTimer;
+        //Watering Ground
+        private int WateringThreshold;
+        private float WateringTimer;
+        private bool animationIsRunningWater = false;
+        private bool animationIsRunningHoe = false;
+        private float animationIsRunningtimer;
 
 
         public Player(Vector2 pos) : base(pos)
@@ -21,7 +36,7 @@ namespace _2UgersProject_Stardew_Valley
 
         public override void LoadContent(ContentManager content)
         {
-            charaset = new Texture2D[7];
+            charaset = new Texture2D[9];
             #region Idle
             threshold = 40;//miliseconds for each image on spritesheet
             charaset[0] = content.Load<Texture2D>("Animation/IdleSpriteSheet");
@@ -47,6 +62,16 @@ namespace _2UgersProject_Stardew_Valley
             charaset[4] = content.Load<Texture2D>("Animation/WalkForwardAnim");
             forBackThreshold = 350;//miliseconds for each image on spritesheet
             walkTimer = 0;
+            #endregion
+            #region Watering
+            charaset[5] = content.Load<Texture2D>("Animation/Watering");
+            WateringThreshold = 300;
+            WateringTimer = 0;
+            #endregion
+            #region Hoeing
+            charaset[6] = content.Load<Texture2D>("Animation/HoeingGround");
+            Hoeingthreshold = 300;
+            HoeingTimer = 0;
             #endregion
             #region Load Food and energy bars
             barSprite = new Texture2D[5];
@@ -80,7 +105,7 @@ namespace _2UgersProject_Stardew_Valley
 
         }
         /// <summary>
-        /// Handles the events about walking and doing stuff in the GameWorld
+        /// Handles the Walking, Hoeing the ground and watering the ground.
         /// </summary>
         /// <param name="gameTime"></param>
         private void HandleInput(GameTime gameTime)
@@ -89,14 +114,88 @@ namespace _2UgersProject_Stardew_Valley
 
             KeyboardState keySate = Keyboard.GetState();
             walkTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
-            if (keySate.IsKeyDown(Keys.E))
+            #region watering
+            if (animationIsRunningWater == false && animationIsRunningHoe == false)
             {
-                Terrain.Terrain_Change(position.X, position.Y, 3);
+                if (keySate.IsKeyDown(Keys.E))
+                {
+                    x1 = 0;
+                    animationIsRunningWater = true;
+                    charSpriteIndex = 5;
+                    energy -= 5;
+                }
             }
+            if (animationIsRunningWater == true && animationIsRunningHoe == false)
+            {
+                canMove = false;
+                WateringTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+                if (WateringTimer > WateringThreshold)
+                {
+                    if (x1 >= 32 * 2)
+                    {
+                        x1 = 0;
+                        WateringTimer = 0;
+                    }
+                    else
+                    {
+                        x1 += 32;
+                        WateringTimer = 0;
+                    }
+                }
+                animationIsRunningtimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
+                if (animationIsRunningtimer > 2)
+                {
+                    animationIsRunningWater = false;
+                    animationIsRunningtimer = 0;
+                    x1 = 0;
+                }
+            }
+            #endregion
+            #region Hoeing
+            if (animationIsRunningHoe == false && animationIsRunningWater == false)
+            {
+                if (keySate.IsKeyDown(Keys.Q))
+                {
+                    x1 = 0;
+                    animationIsRunningHoe = true;
+                    energy -= 5;
+                    charSpriteIndex = 6;
+                }
+
+            }
+            if (animationIsRunningHoe == true)
+            {
+                canMove = false;
+                HoeingTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+                if (HoeingTimer > Hoeingthreshold)
+                {
+                    if (x1 >= 32 * 3)
+                    {
+                        x1 = 0;
+                        HoeingTimer = 0;
+                        Terrain.Terrain_Change(position.X, position.Y, 4);
+                    }
+                    else
+                    {
+                        x1 += 32;
+                        HoeingTimer = 0;
+                    }
+                }
+                animationIsRunningtimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
+                if (animationIsRunningtimer > 1.5f)
+                {
+                    animationIsRunningHoe = false;
+                    animationIsRunningtimer = 0;
+                    x1 = 0;
+                }
+            }
+            #endregion
             //Runs Idle Animation
             #region Idle anim
-            if (!keySate.IsKeyDown(Keys.S) && !keySate.IsKeyDown(Keys.W) && !keySate.IsKeyDown(Keys.A) && !keySate.IsKeyDown(Keys.D))
+            if (!keySate.IsKeyDown(Keys.S) && !keySate.IsKeyDown(Keys.W) && !keySate.IsKeyDown(Keys.A)
+                && !keySate.IsKeyDown(Keys.D) && !keySate.IsKeyDown(Keys.E) && animationIsRunningWater == false && animationIsRunningHoe == false)
             {
+
                 idleTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
                 // Check if the timer has exceeded the threshold.
                 charSpriteIndex = 0;
@@ -115,110 +214,146 @@ namespace _2UgersProject_Stardew_Valley
                 }
             }
             #endregion
-            #region walk
-            #region WalkForward
-            if (keySate.IsKeyDown(Keys.W))
+            if (canMove == true)
             {
-                charSpriteIndex = 3;
-                velocity += new Vector2(0, -1);
-                if (walkTimer > forBackThreshold)
+                #region walk
+                #region WalkForward
+                if (keySate.IsKeyDown(Keys.W) && animationIsRunningWater == false && animationIsRunningHoe == false)
                 {
+                    charSpriteIndex = 3;
+                    velocity += new Vector2(0, -1);
+                    if (walkTimer > forBackThreshold)
+                    {
 
-                    if (x1 >= 32 * 3)
-                    {
-                        x1 = 0;
-                        walkTimer = 0;
-                    }
-                    else
-                    {
-                        x1 += 32;
-                        walkTimer = 0;
+                        if (x1 >= 32 * 3)
+                        {
+                            x1 = 0;
+                            walkTimer = 0;
+                        }
+                        else
+                        {
+                            x1 += 32;
+                            walkTimer = 0;
+                        }
                     }
                 }
-            }
-            #endregion
-            #region WalkBack
-            if (keySate.IsKeyDown(Keys.S))
-            {
-                charSpriteIndex = 4;
-                velocity += new Vector2(0, 1);
-                if (walkTimer > forBackThreshold)
+                #endregion
+                #region WalkBack
+                if (keySate.IsKeyDown(Keys.S) && animationIsRunningWater == false && animationIsRunningHoe == false)
                 {
+                    charSpriteIndex = 4;
+                    velocity += new Vector2(0, 1);
+                    if (walkTimer > forBackThreshold)
+                    {
 
-                    if (x1 >= 32 * 3)
-                    {
-                        x1 = 0;
-                        walkTimer = 0;
-                    }
-                    else
-                    {
-                        x1 += 32;
-                        walkTimer = 0;
+                        if (x1 >= 32 * 3)
+                        {
+                            x1 = 0;
+                            walkTimer = 0;
+                        }
+                        else
+                        {
+                            x1 += 32;
+                            walkTimer = 0;
+                        }
                     }
                 }
-            }
-            #endregion
-            #region Walkleft
-            if (keySate.IsKeyDown(Keys.A))
-            {
-                charSpriteIndex = 2;
-                velocity += new Vector2(-1, 0);
-                if (walkTimer > walkThreshold)
+                #endregion
+                #region Walkleft
+                if (keySate.IsKeyDown(Keys.A) && animationIsRunningWater == false && animationIsRunningHoe == false)
                 {
-                    if (x1 >= 32 * 3)
+                    charSpriteIndex = 2;
+                    velocity += new Vector2(-1, 0);
+                    if (walkTimer > walkThreshold)
                     {
-                        x1 = 0;
-                        walkTimer = 0;
-                    }
-                    else
-                    {
-                        x1 += 32;
-                        walkTimer = 0;
+                        if (x1 >= 32 * 3)
+                        {
+                            x1 = 0;
+                            walkTimer = 0;
+                        }
+                        else
+                        {
+                            x1 += 32;
+                            walkTimer = 0;
+                        }
                     }
                 }
-            }
-            #endregion
-            #region WalkRight
-            walkTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
-            if (keySate.IsKeyDown(Keys.D))
-            {
-                charSpriteIndex = 1;
-                velocity += new Vector2(1, 0);
-                if (walkTimer > walkThreshold)
+                #endregion
+                #region WalkRight
+                walkTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+                if (keySate.IsKeyDown(Keys.D) && animationIsRunningWater == false && animationIsRunningHoe == false)
                 {
-                    if (x1 >= 32 * 3)
+                    charSpriteIndex = 1;
+                    velocity += new Vector2(1, 0);
+                    if (walkTimer > walkThreshold)
                     {
-                        x1 = 0;
-                        walkTimer = 0;
-                    }
-                    else
-                    {
-                        x1 += 32;
-                        walkTimer = 0;
+                        if (x1 >= 32 * 3)
+                        {
+                            x1 = 0;
+                            walkTimer = 0;
+                        }
+                        else
+                        {
+                            x1 += 32;
+                            walkTimer = 0;
+                        }
                     }
                 }
+                #endregion
+                if (velocity != Vector2.Zero)
+                {
+                    velocity.Normalize();
+                }
+                #endregion
+
             }
-            #endregion
-            if (velocity != Vector2.Zero)
+            if (keySate.IsKeyDown(Keys.R))
             {
-                velocity.Normalize();
+                hunger += 30;
+                if (hunger > 64)
+                {
+                    hunger = 64;
+                }
             }
-            #endregion
             if (keySate.IsKeyDown(Keys.P))
             {
                 //new Plants(vector pos);
             }
         }
+        /// <summary>
+        /// Takes care of the energybar and foodbar.
+        /// The energybar follows the foodbar in which if the foodbar goes down so does the energy, 
+        /// energy regens when the foodbar is higher than the energybar.
+        /// When Hoeing or Watering it consumes a sertain amount of energy.
+        /// </summary>
+        /// <param name="gameTime"></param>
         private void HandleEnergyAndFood(GameTime gameTime)
         {
             //RecBar[0] = energyBar | RecBar[2] = foodBar
-            hunger -= (float)gameTime.ElapsedGameTime.TotalSeconds;
+            hunger -= (float)gameTime.ElapsedGameTime.TotalSeconds / foodDecrease;
             energyRecBar[2].Height = (int)hunger;
-            if ((int)hunger <= energyRecBar[2].Height *1f)
+            if (hunger <= 0)
             {
-                energy -= (float)gameTime.ElapsedGameTime.TotalSeconds;
+                energy -= (float)gameTime.ElapsedGameTime.TotalSeconds * 2;
                 energyRecBar[0].Height = (int)energy;
-
+            }
+            energy += (float)gameTime.ElapsedGameTime.TotalSeconds;
+            energyRecBar[0].Height = (int)energy;
+            if (energy > 64)
+            {
+                energy = 64;
+            }
+            if (energy >= hunger)
+            {
+                energy = hunger;
+            }
+            if (energy <= 0)// if you have 0 energy then you cant move.
+            {
+                canMove = false;
+            }
+            else if (energy > 0)
+            {
+                canMove = true;
             }
         }
         private void Eat()

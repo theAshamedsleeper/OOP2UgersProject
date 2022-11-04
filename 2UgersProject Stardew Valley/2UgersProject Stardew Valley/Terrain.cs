@@ -113,7 +113,7 @@ namespace _2UgersProject_Stardew_Valley
         public static void Terrain_Change(float x, float y, int z)
         {
             int x_mod = 0;
-            if (0 <= z && z < 4)
+            if (0 <= z && z < 6)
             {
                 float y_1 = (((y / scale) - ((y / scale) % 32f)) / 32f);
                 float x_1 = (((x / scale) - ((x / scale) % 32f)) / 32f);
