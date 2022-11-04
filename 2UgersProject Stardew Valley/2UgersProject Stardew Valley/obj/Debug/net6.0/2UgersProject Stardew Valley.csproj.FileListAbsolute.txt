@@ -64,26 +64,6 @@ C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersPr
 C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixilart-frames_4\pixil-frame-3.xnb
 C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixilart-frames_4\pixil-frame-4.xnb
 D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\IdleSpriteSheet.xnb
-D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-0.xnb
-D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-1.xnb
-D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-10.xnb
-D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-11.xnb
-D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-12.xnb
-D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-13.xnb
-D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-14.xnb
-D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-15.xnb
-D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-16.xnb
-D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-17.xnb
-D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-18.xnb
-D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-19.xnb
-D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-2.xnb
-D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-3.xnb
-D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-4.xnb
-D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-5.xnb
-D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-6.xnb
-D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-7.xnb
-D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-8.xnb
-D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Idle\pixil-frame-9.xnb
 D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixil-frame-0.xnb
 D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixil-frame-1.xnb
 D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixil-frame-2.xnb
@@ -149,3 +129,11 @@ C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProje
 C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Sprites\FoodEnergyBarSprite\BackgroundBar.xnb
 C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Sprites\FoodEnergyBarSprite\EnergyBar.xnb
 C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Sprites\FoodEnergyBarSprite\foodBar.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\CtYF6HCWIAEwvF9.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\CtYF6HCWIAEwvF9_2.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\HoeingGround.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Walk Left.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Animation\Watering.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Sprites\FoodEnergyBarSprite\BackgroundBar.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Sprites\FoodEnergyBarSprite\EnergyBar.xnb
+D:\Program Files (x86)\Skole\OOP\2ugersPro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Sprites\FoodEnergyBarSprite\foodBar.xnb
