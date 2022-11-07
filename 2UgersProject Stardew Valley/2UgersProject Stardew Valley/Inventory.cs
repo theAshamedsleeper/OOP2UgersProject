@@ -158,15 +158,23 @@ namespace _2UgersProject_Stardew_Valley
         }
         #endregion
         #region timer
+        // timer checker.
         public static float timer(float deltatime)
         {
             time += deltatime;
             return time;
         }
+        // starting the timer
         public static void start_timer()
         {
             time = 0;
         }
+        // timer counting
+        public static void timer_count(float deltatime)
+        {
+            time += deltatime;
+        }
+        // the same but for closed.
         public static float timer_closed(float deltatime)
         {
             time_2 += deltatime;
@@ -175,6 +183,10 @@ namespace _2UgersProject_Stardew_Valley
         public static void start_timer_closed()
         {
             time_2 = 0;
+        }
+        public static void timer_count_closed(float deltatime)
+        {
+            time_2 += deltatime;
         }
         #endregion
     }

@@ -73,32 +73,42 @@ namespace _2UgersProject_Stardew_Valley
                 gameObjects[i].Update(gameTime);
             }
             #region inventory
+            // needed for inventory, as spam opening it without a timer hurts my eyes.
+            float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
+            // input for inventory
             if (Keyboard.GetState().IsKeyDown(Keys.I))
             {
-                float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
+                //  if its open
                 if (inv == true)
                 {
-                    if (Inventory.timer(deltaTime) >= 0.1f)
+                    if (Inventory.timer(deltaTime) >= 0.5f)
                     {
                         Inventory.start_timer_closed();
+                        // inventory closed, we stop it
                         inv = false;
                     }
                 }
                 else
                 {
-                    if(Inventory.timer_closed(deltaTime) >= 0.1f)
+                    if(Inventory.timer_closed(deltaTime) >= 0.5f)
                     {
                         Inventory.start_timer();
+                        // inventory open, start rendering and check for inputs from mouse
                         inv = true;
                     }
                 }
             }
+            // whats needed to update if inventory is open
             if (inv == true)
             {
                 var mouseState = Mouse.GetState();
                 var mousePosition = new Point(mouseState.X, mouseState.Y);
+                // i send the mouse position over as i didn't wan't to load more libraries ind inventory
                 Inventory.update(mousePosition, button_baground.Width*worldScale);
             }
+            //counting for the inventory timer
+            Inventory.timer_count(deltaTime);
+            Inventory.timer_count_closed(deltaTime);
             #endregion
             // TODO: Add your update logic here
             base.Update(gameTime);
@@ -108,11 +118,14 @@ namespace _2UgersProject_Stardew_Valley
             GraphicsDevice.Clear(Color.CornflowerBlue);
             _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
             #region terain World
+            // x and y coords of where the terrain tiles are drawn.
             float gx = 0f;
             float gy = 0f;
+            // for loop to draw all the terrain.
             for (int i = 0; i < terainBlockAmount; i++)
             {
                 #region texture terrain switch
+                // the switch changes the terrain drawn depending on the terrain int.
                 switch (Terrain.Which_Terrain(gx, gy))
                 {
                     case 0:
@@ -164,6 +177,7 @@ namespace _2UgersProject_Stardew_Valley
             #region buttons
             if (inv == true)
             {
+                // runescape baground drawn.
                 _spriteBatch.Draw(button_baground,//what to draw
                     new Vector2(Inventory.Inventory_x, Inventory.Inventory_y),//place to draw it
                     null,//rectangle
@@ -173,6 +187,7 @@ namespace _2UgersProject_Stardew_Valley
                     worldScale,//How big
                     SpriteEffects.None,//effects
                     0f);//Layer
+                //for loop for all buttons drawn, if theres an item to be drawn, its drawn here.
                 for (int i = 0; i < Inventory.But_y.Length; i++)
                 {
                     Color button_color = Color.White;
