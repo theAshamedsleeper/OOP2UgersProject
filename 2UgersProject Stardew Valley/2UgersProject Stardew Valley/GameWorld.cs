@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
-
+using System.Net.NetworkInformation;
 
 namespace _2UgersProject_Stardew_Valley
 {
@@ -16,6 +16,7 @@ namespace _2UgersProject_Stardew_Valley
         private Texture2D grass_terrain;
         private Texture2D grass2_terrain;
         private Texture2D dirt_terrain;
+        private Texture2D Hoe_Water_terrain;
         private Texture2D dirt2_terrain;
         private Texture2D hoe_terrain;
         private Texture2D texture_terrain;
@@ -54,6 +55,7 @@ namespace _2UgersProject_Stardew_Valley
             hoe_terrain = Content.Load<Texture2D>("pixilart-drawing_1");
             button_inv = Content.Load<Texture2D>("CtYf6HCWIAEwvF9_2");
             button_baground = Content.Load<Texture2D>("CtYf6HCWIAEwvF9");
+            Hoe_Water_terrain = Content.Load<Texture2D>("Sprites/WatedHoeGround");
             //player
             for (int i = 0; i < gameObjects.Count; i++)
             {
@@ -132,6 +134,9 @@ namespace _2UgersProject_Stardew_Valley
                         break;
                     case 5:
                         texture_terrain = grass2_terrain;
+                        break;
+                    case 6:
+                        texture_terrain = Hoe_Water_terrain;
                         break;
                 }
                 #endregion
