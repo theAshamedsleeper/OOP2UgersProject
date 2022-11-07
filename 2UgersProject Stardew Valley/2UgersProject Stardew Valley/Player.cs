@@ -14,6 +14,8 @@ namespace _2UgersProject_Stardew_Valley
         private float foodDecrease = 2f;//Increase to slowdown food decrease
         private float idleTimer;
         private float animationIsRunningtimer;
+        private bool hasEnergy = true;
+        private bool canHoe;
         //Walk right/left anim
         private int walkThreshold;
         private float walkTimer;
@@ -116,14 +118,18 @@ namespace _2UgersProject_Stardew_Valley
             #region watering
             if (animationIsRunningWater == false && animationIsRunningHoe == false)
             {
-                if (keySate.IsKeyDown(Keys.E))
+                if (hasEnergy == true)
                 {
-                    x1 = 0;
-                    animationIsRunningWater = true;
-                    charSpriteIndex = 5;
-                   
-                    energy -= 5;
+                    if (keySate.IsKeyDown(Keys.E))
+                    {
+                        x1 = 0;
+                        animationIsRunningWater = true;
+                        charSpriteIndex = 5;
+
+                        energy -= 5;
+                    }
                 }
+
             }
             if (animationIsRunningWater == true && animationIsRunningHoe == false)
             {
@@ -154,17 +160,28 @@ namespace _2UgersProject_Stardew_Valley
                     x1 = 0;
                 }
             }
-            
+
             #endregion
             #region Hoeing
-            if (animationIsRunningHoe == false && animationIsRunningWater == false)
+            if (Terrain.Which_Terrain(position.X, position.Y) == 2)
             {
-                if (keySate.IsKeyDown(Keys.Q))
+                canHoe = false;
+            }
+            else
+            {
+                canHoe = true;
+            }
+            if (canHoe == true && animationIsRunningHoe == false && animationIsRunningWater == false)
+            {
+                if (hasEnergy == true)
                 {
-                    x1 = 0;
-                    animationIsRunningHoe = true;
-                    energy -= 5;
-                    charSpriteIndex = 6;
+                    if (keySate.IsKeyDown(Keys.Q))
+                    {
+                        x1 = 0;
+                        animationIsRunningHoe = true;
+                        energy -= 5;
+                        charSpriteIndex = 6;
+                    }
                 }
 
             }
@@ -241,6 +258,10 @@ namespace _2UgersProject_Stardew_Valley
                             walkTimer = 0;
                         }
                     }
+                    if (position.Y < 0)
+                    {
+                        position.Y = 1080;
+                    }
                 }
                 #endregion
                 #region WalkBack
@@ -262,6 +283,10 @@ namespace _2UgersProject_Stardew_Valley
                             walkTimer = 0;
                         }
                     }
+                    if (position.Y > 1080)
+                    {
+                        position.Y = 0;
+                    }
                 }
                 #endregion
                 #region Walkleft
@@ -281,6 +306,10 @@ namespace _2UgersProject_Stardew_Valley
                             x1 += 32;
                             walkTimer = 0;
                         }
+                    }
+                    if (position.X < 0 )
+                    {
+                        position.X = 1920;
                     }
                 }
                 #endregion
@@ -302,6 +331,10 @@ namespace _2UgersProject_Stardew_Valley
                             x1 += 32;
                             walkTimer = 0;
                         }
+                    }
+                    if (position.X > 1920)
+                    {
+                        position.X = 0;
                     }
                 }
                 #endregion
@@ -355,10 +388,13 @@ namespace _2UgersProject_Stardew_Valley
             if (energy <= 0)// if you have 0 energy then you cant move.
             {
                 canMove = false;
+                hasEnergy = false;
+                energy = 0;
             }
             else if (energy > 0)//if you have 1 or more energy then you can move.
             {
                 canMove = true;
+                hasEnergy = true;
             }
         }
         private void Eat()

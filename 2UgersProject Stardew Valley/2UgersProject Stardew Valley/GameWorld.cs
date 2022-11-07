@@ -33,6 +33,7 @@ namespace _2UgersProject_Stardew_Valley
             _graphics.PreferredBackBufferHeight = 1080;
             _graphics.PreferredBackBufferWidth = 1920;
             screenSize = new Vector2(_graphics.PreferredBackBufferWidth, _graphics.PreferredBackBufferHeight);
+            _graphics.IsFullScreen = true;
             IsMouseVisible = true;
         }
 
