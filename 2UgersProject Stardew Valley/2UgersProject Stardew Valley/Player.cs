@@ -7,12 +7,13 @@ namespace _2UgersProject_Stardew_Valley
 {
     internal class Player : GameObjects
     {
-        private float energy;
-        private float hunger;
+        private float energy;//energy bar.
+        private float hunger;//food bar.
         private int x1 = 0;
         private bool canMove = true;//Makes it so you cant move during an animation
         private float foodDecrease = 2f;//Increase to slowdown food decrease
         private float idleTimer;
+        private float animationIsRunningtimer;
         //Walk right/left anim
         private int walkThreshold;
         private float walkTimer;
@@ -21,19 +22,17 @@ namespace _2UgersProject_Stardew_Valley
         //Hoeing Ground
         private int Hoeingthreshold;
         private float HoeingTimer;
+        private bool animationIsRunningHoe = false;
         //Watering Ground
         private int WateringThreshold;
         private float WateringTimer;
         private bool animationIsRunningWater = false;
-        private bool animationIsRunningHoe = false;
-        private float animationIsRunningtimer;
 
 
         public Player(Vector2 pos) : base(pos)
         {
             scale = 2f;//scale of the player
         }
-
         public override void LoadContent(ContentManager content)
         {
             charaset = new Texture2D[9];
@@ -45,7 +44,7 @@ namespace _2UgersProject_Stardew_Valley
             #endregion
             #region WalkRight
             charaset[1] = content.Load<Texture2D>("Animation/WalkAnim");
-            walkThreshold = 350;//miliseconds
+            walkThreshold = 350;////miliseconds for each image on spritesheet
             walkTimer = 0;
             #endregion
             #region WalkLeft
@@ -65,12 +64,12 @@ namespace _2UgersProject_Stardew_Valley
             #endregion
             #region Watering
             charaset[5] = content.Load<Texture2D>("Animation/Watering");
-            WateringThreshold = 300;
+            WateringThreshold = 300;//miliseconds for each image on spritesheet
             WateringTimer = 0;
             #endregion
             #region Hoeing
             charaset[6] = content.Load<Texture2D>("Animation/HoeingGround");
-            Hoeingthreshold = 300;
+            Hoeingthreshold = 300;//miliseconds for each image on spritesheet
             HoeingTimer = 0;
             #endregion
             #region Load Food and energy bars
@@ -122,6 +121,7 @@ namespace _2UgersProject_Stardew_Valley
                     x1 = 0;
                     animationIsRunningWater = true;
                     charSpriteIndex = 5;
+                   
                     energy -= 5;
                 }
             }
@@ -145,11 +145,16 @@ namespace _2UgersProject_Stardew_Valley
                 animationIsRunningtimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
                 if (animationIsRunningtimer > 2)
                 {
+                    if (Terrain.Which_Terrain(position.X, position.Y) == 4) //if the value of the terrain is equal to 4 then change the terrain to terrain value 6
+                    {
+                        Terrain.Terrain_Change(position.X, position.Y, 6);//changes to Watered hoed ground
+                    }
                     animationIsRunningWater = false;
                     animationIsRunningtimer = 0;
                     x1 = 0;
                 }
             }
+            
             #endregion
             #region Hoeing
             if (animationIsRunningHoe == false && animationIsRunningWater == false)
@@ -309,7 +314,7 @@ namespace _2UgersProject_Stardew_Valley
             }
             if (keySate.IsKeyDown(Keys.R))
             {
-                hunger += 30;
+                hunger += 5;
                 if (hunger > 64)
                 {
                     hunger = 64;
@@ -339,11 +344,11 @@ namespace _2UgersProject_Stardew_Valley
             }
             energy += (float)gameTime.ElapsedGameTime.TotalSeconds;
             energyRecBar[0].Height = (int)energy;
-            if (energy > 64)
+            if (energy > 64)//so the energy bar doesnt get bigger than 64
             {
-                energy = 64;
+                energy = 64;//64 is the max height of the energy sprite bar
             }
-            if (energy >= hunger)
+            if (energy >= hunger)//makes sure the the energy bar follows the amount of food you have.
             {
                 energy = hunger;
             }
@@ -351,7 +356,7 @@ namespace _2UgersProject_Stardew_Valley
             {
                 canMove = false;
             }
-            else if (energy > 0)
+            else if (energy > 0)//if you have 1 or more energy then you can move.
             {
                 canMove = true;
             }
