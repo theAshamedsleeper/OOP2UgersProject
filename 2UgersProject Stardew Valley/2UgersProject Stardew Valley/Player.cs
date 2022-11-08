@@ -151,9 +151,9 @@ namespace _2UgersProject_Stardew_Valley
                 animationIsRunningtimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
                 if (animationIsRunningtimer > 1.5f)//the lower you set the value the faster the animation is over.
                 {
-                    if (Terrain.Which_Terrain(position.X, position.Y) == 4) //if the value of the terrain is equal to 4 then change the terrain to terrain value 6
+                    if (Terrain.Which_Terrain(position.X+32, position.Y + 32) == 4) //if the value of the terrain is equal to 4 then change the terrain to terrain value 6
                     {
-                        Terrain.Terrain_Change(position.X, position.Y, 6);//changes to Watered hoed ground
+                        Terrain.Terrain_Change(position.X + 32, position.Y + 32, 6);//changes to Watered hoed ground
                     }
                     animationIsRunningWater = false;
                     animationIsRunningtimer = 0;
@@ -195,7 +195,7 @@ namespace _2UgersProject_Stardew_Valley
                     {
                         x1 = 0;
                         HoeingTimer = 0;
-                        Terrain.Terrain_Change(position.X, position.Y, 4);//Changes the tile to tile 4 from player pos
+                        Terrain.Terrain_Change(position.X+32, position.Y+32, 4);//Changes the tile to tile 4 from player pos
                     }
                     else
                     {
