@@ -253,7 +253,7 @@
 /processorParam:TextureFormat=Color
 /build:Sprites/FoodEnergyBarSprite/foodBar.png
 
-#begin Sprites/OnionGrowingNotWater.png
+#begin Sprites/seedCheestSprite.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -263,7 +263,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Sprites/OnionGrowingNotWater.png
+/build:Sprites/seedCheestSprite.png
 
 #begin Sprites/WatedHoeGround.png
 /importer:TextureImporter
@@ -276,16 +276,4 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Sprites/WatedHoeGround.png
-
-#begin Sprites/Watered growin Onion.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/Watered growin Onion.png
 

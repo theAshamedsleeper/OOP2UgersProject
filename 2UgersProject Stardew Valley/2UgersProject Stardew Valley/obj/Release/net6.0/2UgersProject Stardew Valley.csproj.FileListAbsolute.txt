@@ -1,0 +1,49 @@
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\Content\Animation\HoeingGround.xnb
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\Content\Animation\IdleSpriteSheet.xnb
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\Content\Animation\Walk Left.xnb
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\Content\Animation\WalkAnim.xnb
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\Content\Animation\WalkBackAnim.xnb
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\Content\Animation\WalkForwardAnim.xnb
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\Content\Animation\Watering.xnb
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\Content\CtYF6HCWIAEwvF9.xnb
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\Content\CtYF6HCWIAEwvF9_2.xnb
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\Content\pixil-frame-0.xnb
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\Content\pixil-frame-1.xnb
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\Content\pixil-frame-2.xnb
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\Content\pixil-frame-3.xnb
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\Content\pixilart-drawing_1.xnb
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\Content\pixilart-frames_4\pixil-frame-0.xnb
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\Content\pixilart-frames_4\pixil-frame-1.xnb
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\Content\pixilart-frames_4\pixil-frame-2.xnb
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\Content\pixilart-frames_4\pixil-frame-3.xnb
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\Content\pixilart-frames_4\pixil-frame-4.xnb
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\Content\Sprites\FoodEnergyBarSprite\BackgroundBar.xnb
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\Content\Sprites\FoodEnergyBarSprite\EnergyBar.xnb
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\Content\Sprites\FoodEnergyBarSprite\foodBar.xnb
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\Content\Sprites\pixil-frame-0 (9).xnb
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\Content\Sprites\WatedHoeGround.xnb
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\2UgersProject Stardew Valley.exe
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\2UgersProject Stardew Valley.deps.json
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\2UgersProject Stardew Valley.runtimeconfig.json
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\2UgersProject Stardew Valley.dll
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\2UgersProject Stardew Valley.pdb
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\MonoGame.Framework.dll
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\runtimes\linux-x64\native\libSDL2-2.0.so.0
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\runtimes\linux-x64\native\libopenal.so.1
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\runtimes\osx\native\libSDL2.dylib
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\runtimes\osx\native\libopenal.1.dylib
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\runtimes\win-x64\native\SDL2.dll
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\runtimes\win-x64\native\soft_oal.dll
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\runtimes\win-x86\native\SDL2.dll
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Release\net6.0\runtimes\win-x86\native\soft_oal.dll
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Release\net6.0\2UgersProject Stardew Valley.csproj.AssemblyReference.cache
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Release\net6.0\2UgersProject Stardew Valley.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Release\net6.0\2UgersProject Stardew Valley.AssemblyInfoInputs.cache
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Release\net6.0\2UgersProject Stardew Valley.AssemblyInfo.cs
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Release\net6.0\2UgersProject Stardew Valley.csproj.CoreCompileInputs.cache
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Release\net6.0\2UgersProject Stardew Valley.csproj.CopyComplete
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Release\net6.0\2UgersProject Stardew Valley.dll
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Release\net6.0\refint\2UgersProject Stardew Valley.dll
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Release\net6.0\2UgersProject Stardew Valley.pdb
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Release\net6.0\2UgersProject Stardew Valley.genruntimeconfig.cache
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\obj\Release\net6.0\ref\2UgersProject Stardew Valley.dll
