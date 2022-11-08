@@ -122,6 +122,7 @@ namespace _2UgersProject_Stardew_Valley
                 {
                     if (keySate.IsKeyDown(Keys.E))
                     {
+                        Plant_t.New_Plant(position.X, position.Y, 1);
                         x1 = 0;
                         animationIsRunningWater = true;
                         charSpriteIndex = 5;

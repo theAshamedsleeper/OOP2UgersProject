@@ -13,29 +13,33 @@ namespace _2UgersProject_Stardew_Valley
         private static List<int[]> plantys = new List<int[]>();
         private static List<int[]> plant_r_s = new List<int[]>();
         private static List<int> plant_r = new List<int>();
+        private static float scale = Terrain.t_scale;
+        private static int growth = 0;
+        private static float grow = 0; 
         #region new plants
         public static void New_Plant(float x, float y, int p)
         {
             float scale = Terrain.t_scale;
-            float y_1 = y - y % 60;
-            float x_1 = x - x % 60;
+            float y_1 = (((y / scale) - ((y / scale) % 32f)) / 32f);
+            float x_1 = (((x / scale) - ((x / scale) % 32f)) / 32f);
             int x_i = (int)x_1;
             int y_i = (int)y_1;
             int[] pla = new int[3];
             pla[0] = x_i;
             pla[1] = y_i;
             pla[2] = p;
-            if (plantys.Count > 0)
-            {
-                Sort_Plants(pla);
-            }
-            else
-            {
-                plantys.Add(pla);
-            }
+            plantys.Add(pla);
         }
+        #region remove later
         private static void Sort_Plants(int[] plants)
         {
+            if (plant_r.Count > 0 )
+            {
+                for (int i = 0; i < plant_r.Count; i++)
+                {
+                    plant_r.RemoveAt(0);
+                }
+            }
             int fine = plantys.Count;
             for (int i = 0; i < plantys.Count; i++)
             {
@@ -79,17 +83,26 @@ namespace _2UgersProject_Stardew_Valley
 
         }
         #endregion
+        #endregion
         #region updating
-        public static void update()
+        public static void update(float deltatime)
         {
 
+        }
+        public static void Grow(float deltatime)
+        {
+            grow += deltatime;
+            if (grow > 1)
+            {
+
+            }
         }
         #endregion
         #region actions
         public static int Plant_Check(float x, float y)
         {
-            x = x - x % 1;
-            y = y - y % 1;
+            x = (((x / scale) - ((x / scale) % 32f)) / 32f);
+            y = (((y / scale) - ((y / scale) % 32f)) / 32f);
             for (int i = 0; i < plantys.Count; i++)
             {
                 int[] pla = plantys[i];
@@ -112,15 +125,12 @@ namespace _2UgersProject_Stardew_Valley
             for (int i = 0; i < plantys.Count; i++)
             {
                 int pla = plantys[i][0];
-                if (x - x%1 == pla)
+                if ((((x / scale) - ((x / scale) % 32f)) / 32f) == pla)
                 {
-                    for (int i_2 = 0; i_2 < plantys.Count; i_2++)
+                    int pla_y = plantys[i][1];
+                    if ((((y / scale) - ((y / scale) % 32f)) / 32f) == pla_y)
                     {
-                        int pla_2 = plantys[i_2][1];
-                        if (y - y % 1 == pla_2)
-                        {
-                            return true;
-                        }
+                        return true;
                     }
                 }
             }
