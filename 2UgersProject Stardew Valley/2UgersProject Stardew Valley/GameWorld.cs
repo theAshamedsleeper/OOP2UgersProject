@@ -4,6 +4,8 @@ using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
+using System.Reflection.Metadata;
+using static System.Formats.Asn1.AsnWriter;
 
 namespace _2UgersProject_Stardew_Valley
 {
@@ -23,6 +25,7 @@ namespace _2UgersProject_Stardew_Valley
         private Texture2D texture_plants;
         private Texture2D button_inv;
         private Texture2D button_baground;
+        protected Texture2D seedChest;
         private List<GameObjects> gameObjects = new List<GameObjects>();
         private static List<GameObjects> gameObjectsToAdd = new List<GameObjects>();
         private float worldScale = 1.875f;//2.4f så passer den i width
@@ -34,7 +37,7 @@ namespace _2UgersProject_Stardew_Valley
             _graphics.PreferredBackBufferHeight = 1080;
             _graphics.PreferredBackBufferWidth = 1920;
             screenSize = new Vector2(_graphics.PreferredBackBufferWidth, _graphics.PreferredBackBufferHeight);
-            _graphics.IsFullScreen = true;
+            _graphics.IsFullScreen = false;
             IsMouseVisible = true;
         }
 
@@ -59,6 +62,8 @@ namespace _2UgersProject_Stardew_Valley
             texture_plants = Content.Load<Texture2D>("CtYf6HCWIAEwvF9_2");
             button_baground = Content.Load<Texture2D>("CtYf6HCWIAEwvF9");
             Hoe_Water_terrain = Content.Load<Texture2D>("Sprites/WatedHoeGround");
+            seedChest = Content.Load<Texture2D>("Sprites/seedCheestSprite");
+
             //player
             for (int i = 0; i < gameObjects.Count; i++)
             {
@@ -205,6 +210,17 @@ namespace _2UgersProject_Stardew_Valley
                     px += 32f * worldScale;
                 }
             }
+            #endregion
+            #region store
+            _spriteBatch.Draw(seedChest,//what to draw
+                   new Vector2(100, 100),//place to draw it
+                   null,//rectangle
+                   Color.White,//color of player
+                   0f, //Rotation of player in radianer
+            new Vector2(0, 0),//Orgin Point
+                   2f,//How big is the player
+                   SpriteEffects.None,//effects
+                   0.9f);//Layer higher the number further back it is
             #endregion
             #region Player
             foreach (GameObjects go in gameObjects)
