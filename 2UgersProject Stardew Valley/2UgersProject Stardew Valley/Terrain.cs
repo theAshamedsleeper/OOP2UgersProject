@@ -24,6 +24,7 @@ namespace _2UgersProject_Stardew_Valley
         private static int[] tiles_x = new int[width * height];
         private static int[] tiles_y = new int[width * height];
         private static int[] tiles_t = new int[width * height];
+        public static float t_scale { get { return scale; } }
         #region terrain making
         /// <summary>
         /// a method to give value to 3 arrays, so we can more easily allocate which is dirt grass or hoed dirt.
@@ -59,7 +60,7 @@ namespace _2UgersProject_Stardew_Valley
         // with what we wish the starting land should look like
         static int start_terrain(int x_1, int y_1)
         {
-            switch (y_1)
+            switch (x_1)
             {
                 case int n when (n >= 7 && n <=10):
                     return 2;
@@ -113,11 +114,14 @@ namespace _2UgersProject_Stardew_Valley
         /// <param name="z"> the value tile wanted to be changed to </param>
         public static void Terrain_Change(float x, float y, int z)
         {
+            // x modification
             int x_mod = 0;
             if (0 <= z && z <= terrain_amount)
             {
+                // scaling the input into usable data
                 float y_1 = (((y / scale) - ((y / scale) % 32f)) / 32f);
                 float x_1 = (((x / scale) - ((x / scale) % 32f)) / 32f);
+                // checks the y array for the location.
                 for (int i = 0; i < height; i++)
                 {
                     if (tiles_y[i * width] == y_1)
@@ -125,10 +129,12 @@ namespace _2UgersProject_Stardew_Valley
                         x_mod = i;
                     }
                 }
+                // checks the x array for location
                 for (int i = 0; i < width; i++)
                 {
                     if (tiles_x[(x_mod * width) + i] == x_1)
                     {
+                        // we have x and y, now we know how far down the array we gotta go for the terrain, then we change it.
                         tiles_t[(x_mod * width) + i] = z;
                     }
                 }
