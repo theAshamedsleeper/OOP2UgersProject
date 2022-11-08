@@ -30,6 +30,7 @@ namespace _2UgersProject_Stardew_Valley
         private float worldScale = 1.875f;//2.4f så passer den i width
         private bool inv = false;
         private int Onion_x = 0;
+        private int o_s_wet = 0;
         public GameWorld()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -75,7 +76,6 @@ namespace _2UgersProject_Stardew_Valley
 
         protected override void Update(GameTime gameTime)
         {
-            onions_rec = new Rectangle(Onion_x,0,32,32);
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
             for (int i = 0; i < gameObjects.Count; i++)
@@ -189,7 +189,7 @@ namespace _2UgersProject_Stardew_Valley
             {
                 if (Plant_t.Plant_Check_b(px, py))
                 {
-                    switch (Plant_t.Plant_Check(px, py))
+                    switch (Plant_t.Plant_Check_G(px, py))
                     {
                         case int n when n >= 0 && n < 200:
                             Onion_x = 0;
@@ -207,7 +207,16 @@ namespace _2UgersProject_Stardew_Valley
                             Onion_x = 128;
                             break;
                     }
-                    _spriteBatch.Draw(onions_sprite[0],//what to draw
+                    if (Plant_t.Plant_Check_wet(px,py) < 50)
+                    {
+                        o_s_wet = 0;
+                    }
+                    else
+                    {
+                        o_s_wet = 1;
+                    }
+                    onions_rec = new Rectangle(Onion_x, 0, 32, 32);
+                    _spriteBatch.Draw(onions_sprite[o_s_wet],//what to draw
                 new Vector2(px, py),//place to draw it
                 onions_rec,//rectangle
                 Color.White,//color of player

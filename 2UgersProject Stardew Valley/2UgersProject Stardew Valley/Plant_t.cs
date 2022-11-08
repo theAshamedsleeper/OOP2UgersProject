@@ -14,7 +14,6 @@ namespace _2UgersProject_Stardew_Valley
         private static List<int[]> plant_r_s = new List<int[]>();
         private static List<int> plant_r = new List<int>();
         private static float scale = Terrain.t_scale;
-        private static int growth = 0;
         private static float grow = 0; 
         #region new plants
         public static void New_Plant(float x, float y, int p)
@@ -24,10 +23,11 @@ namespace _2UgersProject_Stardew_Valley
             float x_1 = (((x / scale) - ((x / scale) % 32f)) / 32f);
             int x_i = (int)x_1;
             int y_i = (int)y_1;
-            int[] pla = new int[3];
+            int[] pla = new int[4];
             pla[0] = x_i;
             pla[1] = y_i;
             pla[2] = p;
+            pla[3] = 300;
             plantys.Add(pla);
         }
         #region remove later
@@ -98,11 +98,15 @@ namespace _2UgersProject_Stardew_Valley
                 {
                     if (plantys[i][2] < 1000)
                     {
-                        plantys[i][2] += 30;
+                        if (plantys[i][3] > 0)
+                        {
+                            plantys[i][2] += 10;
+                            plantys[i][3] -= 5;
+                        }
                     }
                     else
                     {
-                        plantys[i][2] = 0;
+                        plantys[i][3] -= 5;
                     }
                 }
                 grow--;
@@ -110,7 +114,7 @@ namespace _2UgersProject_Stardew_Valley
         }
         #endregion
         #region actions
-        public static int Plant_Check(float x, float y)
+        private static int check(float x, float y)
         {
             x = (((x / scale) - ((x / scale) % 32f)) / 32f);
             y = (((y / scale) - ((y / scale) % 32f)) / 32f);
@@ -119,33 +123,49 @@ namespace _2UgersProject_Stardew_Valley
                 int[] pla = plantys[i];
                 if (x == pla[0])
                 {
-                    for (int i_2 = 0; i_2 < plantys.Count; i_2++)
+                    int[] pla_2 = plantys[i];
+                    if (y == pla_2[1])
                     {
-                        int[] pla_2 = plantys[i_2];
-                        if (y == pla_2[1])
-                        {
-                            return pla_2[2];
-                        }
+                        return i;
                     }
                 }
+            }
+            return -1;
+        }
+        public static void plant_wet(float x, float y)
+        {
+            int i = check(x, y);
+            if (i > -1)
+            {
+                plantys[i][3] += 100;
+            }
+        }
+        public static int Plant_Check_G(float x, float y)
+        {
+            int i = check(x, y);
+            if (i > -1)
+            {
+                return plantys[i][2];
             }
             return 0; 
         }
         public static bool Plant_Check_b(float x, float y)
         {
-            for (int i = 0; i < plantys.Count; i++)
+            int i = check(x, y);
+            if (i > -1)
             {
-                int pla = plantys[i][0];
-                if ((((x / scale) - ((x / scale) % 32f)) / 32f) == pla)
-                {
-                    int pla_y = plantys[i][1];
-                    if ((((y / scale) - ((y / scale) % 32f)) / 32f) == pla_y)
-                    {
-                        return true;
-                    }
-                }
+                return true;
             }
             return false;
+        }
+        public static int Plant_Check_wet(float x, float y)
+        {
+            int i = check(x, y);
+            if (i > -1)
+            {
+                return plantys[i][3];
+            }
+            return -1; ;
         }
         #endregion
 

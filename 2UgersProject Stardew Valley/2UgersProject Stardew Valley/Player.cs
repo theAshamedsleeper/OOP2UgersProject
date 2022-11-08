@@ -115,6 +115,24 @@ namespace _2UgersProject_Stardew_Valley
 
             KeyboardState keySate = Keyboard.GetState();
             walkTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+            #region planting
+            if (animationIsRunningWater == false && animationIsRunningHoe == false)
+            {
+                if (hasEnergy == true)
+                {
+                    if (keySate.IsKeyDown(Keys.F))
+                    {
+                        if (Terrain.Which_Terrain(position.X+32,position.Y+32) == 6)
+                        {
+                            if (Plant_t.Plant_Check_b(position.X+32, position.Y+32) == false)
+                            {
+                                Plant_t.New_Plant(position.X+32, position.Y+32, 1);
+                            }
+                        }
+                    }
+                }
+            }
+            #endregion
             #region watering
             if (animationIsRunningWater == false && animationIsRunningHoe == false)
             {
@@ -122,12 +140,15 @@ namespace _2UgersProject_Stardew_Valley
                 {
                     if (keySate.IsKeyDown(Keys.E))
                     {
-                        Plant_t.New_Plant(position.X, position.Y, 1);
                         x1 = 0;
                         animationIsRunningWater = true;
                         charSpriteIndex = 5;
-
+                        
                         energy -= 5;
+                        if (Plant_t.Plant_Check_b(position.X + 32, position.Y + 32))
+                        {
+                            Plant_t.plant_wet(position.X + 32, position.Y + 32);
+                        }
                     }
                 }
 
