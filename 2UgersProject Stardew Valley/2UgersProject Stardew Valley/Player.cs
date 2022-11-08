@@ -150,7 +150,7 @@ namespace _2UgersProject_Stardew_Valley
                     }
                 }
                 animationIsRunningtimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
-                if (animationIsRunningtimer > 2)
+                if (animationIsRunningtimer > 1.5f)//the lower you set the value the faster the animation is over.
                 {
                     if (Terrain.Which_Terrain(position.X, position.Y) == 4) //if the value of the terrain is equal to 4 then change the terrain to terrain value 6
                     {
@@ -196,7 +196,7 @@ namespace _2UgersProject_Stardew_Valley
                     {
                         x1 = 0;
                         HoeingTimer = 0;
-                        Terrain.Terrain_Change(position.X, position.Y, 4);
+                        Terrain.Terrain_Change(position.X, position.Y, 4);//Changes the tile to tile 4 from player pos
                     }
                     else
                     {
@@ -205,7 +205,7 @@ namespace _2UgersProject_Stardew_Valley
                     }
                 }
                 animationIsRunningtimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
-                if (animationIsRunningtimer > 1.5f)
+                if (animationIsRunningtimer > 1.5f)//the lower you set the value the faster the animation is over.
                 {
                     animationIsRunningHoe = false;
                     animationIsRunningtimer = 0;
@@ -346,7 +346,7 @@ namespace _2UgersProject_Stardew_Valley
                 #endregion
 
             }
-            if (keySate.IsKeyDown(Keys.R))
+            if (keySate.IsKeyDown(Keys.R)) //gives you food at the press of a button
             {
                 hunger += 5;
                 if (hunger > 64)
