@@ -25,11 +25,15 @@ namespace _2UgersProject_Stardew_Valley
         private Texture2D texture_plants;
         private Texture2D button_inv;
         private Texture2D button_baground;
+        private Texture2D[] onions_sprite = new Texture2D[2];
+        private Rectangle onions_rec;
         protected Texture2D seedChest;
         private List<GameObjects> gameObjects = new List<GameObjects>();
         private static List<GameObjects> gameObjectsToAdd = new List<GameObjects>();
         private float worldScale = 1.875f;//2.4f så passer den i width
         private bool inv = false;
+        private int Onion_x = 0;
+        private int o_s_wet = 0;
         public GameWorld()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -63,6 +67,8 @@ namespace _2UgersProject_Stardew_Valley
             button_baground = Content.Load<Texture2D>("CtYf6HCWIAEwvF9");
             Hoe_Water_terrain = Content.Load<Texture2D>("Sprites/WatedHoeGround");
             seedChest = Content.Load<Texture2D>("Sprites/seedCheestSprite");
+            onions_sprite[0] = Content.Load<Texture2D>("Sprites/OnionGrowingNotWater");
+            onions_sprite[1] = Content.Load<Texture2D>("Sprites/Watered growin Onion");
 
             //player
             for (int i = 0; i < gameObjects.Count; i++)
@@ -189,9 +195,36 @@ namespace _2UgersProject_Stardew_Valley
             {
                 if (Plant_t.Plant_Check_b(px, py))
                 {
-                    _spriteBatch.Draw(texture_plants,//what to draw
+                    switch (Plant_t.Plant_Check_G(px, py))
+                    {
+                        case int n when n >= 0 && n < 200:
+                            Onion_x = 0;
+                            break;
+                        case int n when n >= 200 && n < 400:
+                            Onion_x = 32;
+                            break;
+                        case int n when n >= 400 && n < 600:
+                            Onion_x = 64;
+                            break;
+                        case int n when n >= 600 && n < 800:
+                            Onion_x = 96;
+                            break;
+                        case int n when n >= 800 && n < 1000:
+                            Onion_x = 128;
+                            break;
+                    }
+                    if (Plant_t.Plant_Check_wet(px, py) < 50)
+                    {
+                        o_s_wet = 0;
+                    }
+                    else
+                    {
+                        o_s_wet = 1;
+                    }
+                    onions_rec = new Rectangle(Onion_x, 0, 32, 32);
+                    _spriteBatch.Draw(onions_sprite[o_s_wet],//what to draw
                 new Vector2(px, py),//place to draw it
-                null,//rectangle
+                onions_rec,//rectangle
                 Color.White,//color of player
                 0f, //Rotation of player
                 Vector2.Zero,//Orgin Point
