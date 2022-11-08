@@ -20,6 +20,7 @@ namespace _2UgersProject_Stardew_Valley
         private Texture2D dirt2_terrain;
         private Texture2D hoe_terrain;
         private Texture2D texture_terrain;
+        private Texture2D texture_plants;
         private Texture2D button_inv;
         private Texture2D button_baground;
         private List<GameObjects> gameObjects = new List<GameObjects>();
@@ -55,6 +56,7 @@ namespace _2UgersProject_Stardew_Valley
             dirt2_terrain = Content.Load<Texture2D>("pixil-frame-3");
             hoe_terrain = Content.Load<Texture2D>("pixilart-drawing_1");
             button_inv = Content.Load<Texture2D>("CtYf6HCWIAEwvF9_2");
+            texture_plants = Content.Load<Texture2D>("CtYf6HCWIAEwvF9_2");
             button_baground = Content.Load<Texture2D>("CtYf6HCWIAEwvF9");
             Hoe_Water_terrain = Content.Load<Texture2D>("Sprites/WatedHoeGround");
             //player
