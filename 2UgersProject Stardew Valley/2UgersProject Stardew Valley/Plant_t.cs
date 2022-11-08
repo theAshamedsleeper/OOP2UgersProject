@@ -87,14 +87,25 @@ namespace _2UgersProject_Stardew_Valley
         #region updating
         public static void update(float deltatime)
         {
-
+            Grow(deltatime);
         }
         public static void Grow(float deltatime)
         {
             grow += deltatime;
             if (grow > 1)
             {
-
+                for (int i = 0; i < plantys.Count; i++)
+                {
+                    if (plantys[i][2] < 1000)
+                    {
+                        plantys[i][2] += 30;
+                    }
+                    else
+                    {
+                        plantys[i][2] = 0;
+                    }
+                }
+                grow--;
             }
         }
         #endregion
