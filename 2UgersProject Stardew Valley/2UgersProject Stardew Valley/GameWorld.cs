@@ -176,6 +176,36 @@ namespace _2UgersProject_Stardew_Valley
                 }
             }
             #endregion
+            #region plants
+            float px = 0f;
+            float py = 0f;
+            // for loop to draw all the terrain.
+            for (int i = 0; i < terainBlockAmount; i++)
+            {
+                if (Plant_t.Plant_Check_b(px, py))
+                {
+                    _spriteBatch.Draw(texture_plants,//what to draw
+                new Vector2(px, py),//place to draw it
+                null,//rectangle
+                Color.White,//color of player
+                0f, //Rotation of player
+                Vector2.Zero,//Orgin Point
+                worldScale,//How big is the player
+                SpriteEffects.None,//effects
+                0f);//Layer 
+
+                }
+                if (px >= 1920 - 32 * worldScale)
+                {
+                    px = 0;
+                    py += 32f * worldScale;
+                }
+                else
+                {
+                    px += 32f * worldScale;
+                }
+            }
+            #endregion
             #region Player
             foreach (GameObjects go in gameObjects)
             {
