@@ -122,7 +122,7 @@ namespace _2UgersProject_Stardew_Valley
             {
                 if (hasEnergy == true)
                 {
-                    if (keySate.IsKeyDown(Keys.F))
+                    if (keySate.IsKeyDown(Keys.F)/* && pickedUpBool == true*/)
                     {
                         if (Terrain.Which_Terrain(position.X+32,position.Y+32) == 6)
                         {
