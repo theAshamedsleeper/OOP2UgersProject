@@ -77,39 +77,7 @@ namespace _2UgersProject_Stardew_Valley
             return 0;
         }
         #endregion
-        #region LoadUpdateDraw
-        public static void LoadContent(ContentManager content)
-        {
-
-        }
-        public static void Update(GameTime gametime)
-        {
-
-        }
-        public static void Draw(SpriteBatch spritebatch)
-        {
-            for (int i = 0; i < width * height; i++)
-            {
-
-            }
-        }
-        private static void Animate(GameTime gametime)
-        {
-
-        }
-        private static void LoadContent()
-        {
-
-        }
-        #endregion
-        private static void Decrease_Speed()
-        {
-
-        }
-        private static void Inmoveable()
-        {
-
-        }
+        
         #region getinfo
         /// <summary>
         /// method to change a tile, takes the x,y coord and the tile wanted to change into.
