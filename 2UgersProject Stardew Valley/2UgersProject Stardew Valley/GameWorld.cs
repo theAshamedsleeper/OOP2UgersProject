@@ -130,12 +130,14 @@ namespace _2UgersProject_Stardew_Valley
 
             #region Store
 
+            //"If X is pressed and player collides with chest, give one seed":
             if (Keyboard.GetState().IsKeyDown(Keys.X))
             {
                 if (Store.CollisionWithChest(Inventory.player_pos_x, Inventory.player_pos_y, 32, 64))
                 {
+                    //Function from Inventory, that adds items from the index.
                     Inventory.inv_give(1, 1);
-                    //Index mangler ^
+                    
 
 
                 }
