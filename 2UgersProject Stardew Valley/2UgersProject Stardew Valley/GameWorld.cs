@@ -127,9 +127,27 @@ namespace _2UgersProject_Stardew_Valley
             Inventory.timer_count(deltaTime);
             Inventory.timer_count_closed(deltaTime);
             #endregion
-            Plant_t.update(deltaTime);
+
+            #region Store
+
+            if (Keyboard.GetState().IsKeyDown(Keys.X))
+            {
+                if (Store.CollisionWithChest(Inventory.player_pos_x, Inventory.player_pos_y, 32, 64))
+                {
+                    
+
+
+                }
+
+
+            }
+
+                #endregion
+
+                Plant_t.update(deltaTime);
             // TODO: Add your update logic here
             base.Update(gameTime);
+
         }
         protected override void Draw(GameTime gameTime)
         {

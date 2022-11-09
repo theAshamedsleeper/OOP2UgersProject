@@ -194,3 +194,7 @@ C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProje
 C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Sprites\Watered growin Onion.xnb
 C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Sprites\seedCheestSprite.xnb
 C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixel.xnb
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Sprites\OnionGrowingNotWater.xnb
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Sprites\Watered growin Onion.xnb
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixel.xnb
+C:\Users\Bjark\OneDrive\Skrivebord\Study\Basisprogrammering\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Sprites\seeds.xnb
