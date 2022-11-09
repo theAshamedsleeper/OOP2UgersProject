@@ -67,7 +67,7 @@ namespace _2UgersProject_Stardew_Valley
                 SpriteEffects.None,//effects
                 0f);//Layer higher the number further back it is 
             //draws the sprite sheet for debugging
-            spriteBatch.Draw(charaset[charSpriteIndex], position1[0], Color.White);
+           
 
             #region Draw Food and energy
             //draw background color for energyBar
