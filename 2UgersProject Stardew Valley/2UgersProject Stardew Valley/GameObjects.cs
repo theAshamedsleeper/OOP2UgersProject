@@ -10,6 +10,7 @@ namespace _2UgersProject_Stardew_Valley
         protected Texture2D[] sprite;
         protected Texture2D[] barSprite;
         protected Rectangle[] energyRecBar = new Rectangle[5];
+        protected Rectangle seedChestRectangle;
         protected Vector2 position;
         protected float scale;
         protected float speed = 200f;
@@ -33,7 +34,8 @@ namespace _2UgersProject_Stardew_Valley
             {
                 return charaset[charSpriteIndex];
             }
-        }
+        } 
+        
         private Vector2 spriteSize
         {
             get
@@ -66,6 +68,7 @@ namespace _2UgersProject_Stardew_Valley
                 0f);//Layer higher the number further back it is 
             //draws the sprite sheet for debugging
             spriteBatch.Draw(charaset[charSpriteIndex], position1[0], Color.White);
+
             #region Draw Food and energy
             //draw background color for energyBar
             spriteBatch.Draw(barSprite[1],
