@@ -11,7 +11,7 @@ namespace _2UgersProject_Stardew_Valley
         private float hunger;//food bar.
         private int x1 = 0;
         private bool canMove = true;//Makes it so you cant move during an animation
-        private float foodDecrease = 20f;//Increase to slowdown food decrease
+        private float foodDecrease = 2.5f;//Increase to slowdown food decrease
         private float idleTimer;
         private float animationIsRunningtimer;
         private bool hasEnergy = true;
@@ -187,6 +187,25 @@ namespace _2UgersProject_Stardew_Valley
 
             #endregion
             #region Hoeing
+           
+            if (Plant_t.are_there_plants())
+            {
+                if (Plant_t.Plant_Check_G(position.X + 32, position.Y + 32) == 0)
+                {
+                    if (Terrain.Which_Terrain(position.X + 32, position.Y + 32) == 2)
+                    {
+                        canHoe = false;
+                    }
+                    else
+                    {
+                        canHoe = true;
+                    }
+                }
+                else
+                {
+                    canHoe = true;
+                }
+            }
             if (Terrain.Which_Terrain(position.X + 32, position.Y + 32) == 2)
             {
                 canHoe = false;
@@ -194,13 +213,6 @@ namespace _2UgersProject_Stardew_Valley
             else
             {
                 canHoe = true;
-            }
-            if (Plant_t.are_there_plants())
-            {
-                if (Plant_t.Plant_Check_b(position.X + 32, position.Y + 32) == false)
-                {
-                    canHoe = true;
-                }
             }
             if (canHoe == true && animationIsRunningHoe == false && animationIsRunningWater == false)
             {
@@ -230,7 +242,7 @@ namespace _2UgersProject_Stardew_Valley
                         if (Terrain.Which_Terrain(position.X + 32, position.Y + 32) == 6)
                         {
                             // eating and removing the plant at the location
-                            hunger += Plant_t.Plant_Check_G(position.X + 32, position.Y + 32) / 20;
+                            hunger += Plant_t.Plant_Check_G(position.X + 32, position.Y + 32) / 100;
                             Plant_t.plant_re(position.X + 32, position.Y + 32);
                         }
                         Terrain.Terrain_Change(position.X + 32, position.Y + 32, 4);//Changes the tile to tile 4 from player pos
@@ -434,14 +446,6 @@ namespace _2UgersProject_Stardew_Valley
                 canMove = true;
                 hasEnergy = true;
             }
-        }
-        private void Eat()
-        {
-
-        }
-        public override void OnCollision(GameObjects other)
-        {
-
         }
     }
 }
