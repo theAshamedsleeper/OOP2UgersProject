@@ -37,7 +37,7 @@ namespace _2UgersProject_Stardew_Valley
         private int o_s_wet = 0;
         private SpriteFont ContFont;
         private SpriteFont PickFont;
-        public bool pickedUpBool = false;
+        private bool pickedUpBool = false;
         public GameWorld()
         {
             _graphics = new GraphicsDeviceManager(this);
