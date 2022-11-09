@@ -57,7 +57,7 @@ namespace _2UgersProject_Stardew_Valley
         {
             //player
             Vector2 origin = new Vector2(sourceRectangles.Width / 2, sourceRectangles.Height / 2);
-            spriteBatch.Draw(charaset[charSpriteIndex],//what to draw
+            spriteBatch.Draw(currentSprite,//what to draw
                 position,//place to draw it
                 sourceRectangles,//rectangle
                 Color.White,//color of player
