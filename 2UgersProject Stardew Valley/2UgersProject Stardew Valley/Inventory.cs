@@ -112,6 +112,14 @@ namespace _2UgersProject_Stardew_Valley
             inv_space[i_2] = inv_space[i_1];
             inv_space[i_1] = inv_space[i_3];
         }
+        public static int inv_which(int index)
+        {
+            return inv_space[index];
+        }
+        public static void inv_give(int index, int item)
+        {
+            inv_space[index] = item; 
+        }
         /// <summary>
         /// Checks for a collision of a mouse click and inventory positions.
         /// </summary>
