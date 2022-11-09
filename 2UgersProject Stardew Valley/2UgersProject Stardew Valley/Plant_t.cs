@@ -39,7 +39,7 @@ namespace _2UgersProject_Stardew_Valley
             }
             else
             {
-                if (Plant_Check_b(x, y))
+                if (check(x, y) == -1)
                 {
                     float scale = Terrain.t_scale;
                     float y_1 = (((y / scale) - ((y / scale) % 32f)) / 32f);

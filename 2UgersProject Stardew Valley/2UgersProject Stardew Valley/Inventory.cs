@@ -34,6 +34,18 @@ namespace _2UgersProject_Stardew_Valley
         public static int[] But_y { get { return b_y; } }
         public static int Butten_higlight { get { return button_chosen; } }
         public static float inv_scale { get { return 1.875f + 1.125f; } }
+        #region me not liking non main static classes
+        private static float player_x = 0;
+        private static float player_y = 0;
+        public static float player_pos_x { get { return player_x; } }
+        public static float player_pos_y { get { return player_y; } }
+
+        public static void player_pos(float x, float y)
+        {
+            player_x = x;
+            player_y = y;
+        }
+        #endregion
         #endregion
         #region collis
         /// <summary>
@@ -99,6 +111,14 @@ namespace _2UgersProject_Stardew_Valley
             }
             inv_space[i_2] = inv_space[i_1];
             inv_space[i_1] = inv_space[i_3];
+        }
+        public static int inv_which(int index)
+        {
+            return inv_space[index];
+        }
+        public static void inv_give(int index, int item)
+        {
+            inv_space[index] = item; 
         }
         /// <summary>
         /// Checks for a collision of a mouse click and inventory positions.
