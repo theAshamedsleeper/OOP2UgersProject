@@ -134,7 +134,7 @@ namespace _2UgersProject_Stardew_Valley
             {
                 if (Store.CollisionWithChest(Inventory.player_pos_x, Inventory.player_pos_y, 32, 64))
                 {
-                    
+                    Inventory.inv_give(1, 1);
 
 
                 }
