@@ -34,6 +34,7 @@ namespace _2UgersProject_Stardew_Valley
         private bool inv = false;
         private int Onion_x = 0;
         private int o_s_wet = 0;
+        public Rectangle seedChestRectangle;
         public GameWorld()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -69,7 +70,7 @@ namespace _2UgersProject_Stardew_Valley
             seedChest = Content.Load<Texture2D>("Sprites/seedCheestSprite");
             onions_sprite[0] = Content.Load<Texture2D>("Sprites/OnionGrowingNotWater");
             onions_sprite[1] = Content.Load<Texture2D>("Sprites/Watered growin Onion");
-
+            seedChestRectangle = new Rectangle(100, 100, 32, 64);
             //player
             for (int i = 0; i < gameObjects.Count; i++)
             {
@@ -128,7 +129,20 @@ namespace _2UgersProject_Stardew_Valley
             #endregion
             // TODO: Add your update logic here
             base.Update(gameTime);
+
+
+
         }
+
+        public bool CollisionWithChest (GameObjects other)
+        {
+            if (this == other)
+                return false;
+
+           return seedChestRectangle.Intersects(other.seedChestRectangle);
+        }
+
+
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
@@ -247,7 +261,7 @@ namespace _2UgersProject_Stardew_Valley
             #region store
             _spriteBatch.Draw(seedChest,//what to draw
                    new Vector2(100, 100),//place to draw it
-                   null,//rectangle
+                   seedChestRectangle,//rectangle
                    Color.White,//color of player
                    0f, //Rotation of player in radianer
             new Vector2(0, 0),//Orgin Point

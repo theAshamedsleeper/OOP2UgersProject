@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "n0C5rKKQCSyxozvDiGLtb45D0H5qwYVyjQ0yI22YQdKneEaC4pGDgmcAHog2rySIogiltjTlFcAwuZbR5ETDuQ==",
+  "dgSpecHash": "mspLZd97ZQpzLXFyCJHmJXPTUnMjYqJzXmRzm6VbhTpNnbypVM0Ml1Qu/FR3O4tgrs1zta+4FzA4ii7VBDcdiw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\thorb\\OneDrive\\Dokumenter\\GitHub\\2Uger pro\\OOP2UgersProject\\2UgersProject Stardew Valley\\2UgersProject Stardew Valley\\2UgersProject Stardew Valley.csproj",
+  "projectFilePath": "C:\\Users\\Bjark\\OneDrive\\Skrivebord\\Study\\Basisprogrammering\\OOP2UgersProject\\2UgersProject Stardew Valley\\2UgersProject Stardew Valley\\2UgersProject Stardew Valley.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\thorb\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.303\\monogame.content.builder.task.3.8.1.303.nupkg.sha512",
-    "C:\\Users\\thorb\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512"
+    "C:\\Users\\Bjark\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.303\\monogame.content.builder.task.3.8.1.303.nupkg.sha512",
+    "C:\\Users\\Bjark\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512"
   ],
   "logs": []
 }
