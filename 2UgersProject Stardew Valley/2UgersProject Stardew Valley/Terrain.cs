@@ -77,7 +77,6 @@ namespace _2UgersProject_Stardew_Valley
             return 0;
         }
         #endregion
-        
         #region getinfo
         /// <summary>
         /// method to change a tile, takes the x,y coord and the tile wanted to change into.

@@ -134,12 +134,5 @@ namespace _2UgersProject_Stardew_Valley
             }
             return GetCollisionBox.Intersects(other.GetCollisionBox);
         }
-        public virtual void OnCollision(GameObjects other)
-        {
-
-        }
     }
-
-
-
 }

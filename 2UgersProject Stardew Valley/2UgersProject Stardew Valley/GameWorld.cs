@@ -344,9 +344,5 @@ namespace _2UgersProject_Stardew_Valley
             _spriteBatch.Draw(pixel, left, null, Color.Red, 0, Vector2.Zero, SpriteEffects.None, 1);
             _spriteBatch.Draw(pixel, right, null, Color.Red, 0, Vector2.Zero, SpriteEffects.None, 1);
         }
-        protected void InstantiateGameObjects(GameObjects go)
-        {
-
-        }
     }
 }

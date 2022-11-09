@@ -55,59 +55,6 @@ namespace _2UgersProject_Stardew_Valley
                 }
             }
         }
-        #region remove later
-        private static void Sort_Plants(int[] plants)
-        {
-            if (plant_r.Count > 0 )
-            {
-                for (int i = 0; i < plant_r.Count; i++)
-                {
-                    plant_r.RemoveAt(0);
-                }
-            }
-            int fine = plantys.Count;
-            for (int i = 0; i < plantys.Count; i++)
-            {
-                if (plants[0] < plantys[i][0])
-                {
-                    plant_r.Add(i);
-                }
-                else
-                {
-                    fine--;
-                }
-            }
-            if (fine == 0)
-            {
-                plantys.Add(plants);
-            }
-            else
-            {
-                Sorty(plant_r, plants);
-            }
-        }
-        private static void Sorty(List<int> plant_r, int[] Plants)
-        {
-            for (int i = 0; i < plant_r.Count; i++)
-            {
-                plant_r_s.Add(plantys[plant_r[plant_r.Count - (1 + i)]]);
-            }
-            for (int i = 0; i < plant_r.Count; i++)
-            {
-                plantys.RemoveAt(plant_r[plant_r.Count - (1 + i)]);
-            }
-            plantys.Add(Plants);
-            for (int i = 0; i < plant_r.Count; i++)
-            {
-                plantys.Add(plant_r_s[plant_r[plant_r.Count - (1 + i)]]);
-            }
-            for (int i = 0; i < plant_r.Count; i++)
-            {
-                plant_r_s.RemoveAt(plant_r[plant_r.Count - (1 + i)]);
-            }
-
-        }
-        #endregion
         #endregion
         #region updating
         public static void update(float deltatime)
