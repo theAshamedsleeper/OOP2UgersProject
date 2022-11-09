@@ -185,13 +185,20 @@ namespace _2UgersProject_Stardew_Valley
 
             #endregion
             #region Hoeing
-            if (Terrain.Which_Terrain(position.X, position.Y) == 2)
+            if (Terrain.Which_Terrain(position.X + 32, position.Y + 32) == 2)
             {
                 canHoe = false;
             }
             else
             {
                 canHoe = true;
+            }
+            if (Plant_t.are_there_plants())
+            {
+                if (Plant_t.Plant_Check_b(position.X + 32, position.Y + 32) == false)
+                {
+                    canHoe = true;
+                }
             }
             if (canHoe == true && animationIsRunningHoe == false && animationIsRunningWater == false)
             {
@@ -217,7 +224,14 @@ namespace _2UgersProject_Stardew_Valley
                     {
                         x1 = 0;
                         HoeingTimer = 0;
-                        Terrain.Terrain_Change(position.X+32, position.Y+32, 4);//Changes the tile to tile 4 from player pos
+                        // checks if terrain is planted terrain
+                        if (Terrain.Which_Terrain(position.X + 32, position.Y + 32) == 6)
+                        {
+                            // eating and removing the plant at the location
+                            hunger += Plant_t.Plant_Check_G(position.X + 32, position.Y + 32) / 20;
+                            Plant_t.plant_re(position.X + 32, position.Y + 32);
+                        }
+                        Terrain.Terrain_Change(position.X + 32, position.Y + 32, 4);//Changes the tile to tile 4 from player pos
                     }
                     else
                     {

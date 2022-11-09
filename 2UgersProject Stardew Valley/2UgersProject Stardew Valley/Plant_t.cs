@@ -18,17 +18,42 @@ namespace _2UgersProject_Stardew_Valley
         #region new plants
         public static void New_Plant(float x, float y, int p)
         {
-            float scale = Terrain.t_scale;
-            float y_1 = (((y / scale) - ((y / scale) % 32f)) / 32f);
-            float x_1 = (((x / scale) - ((x / scale) % 32f)) / 32f);
-            int x_i = (int)x_1;
-            int y_i = (int)y_1;
-            int[] pla = new int[4];
-            pla[0] = x_i;
-            pla[1] = y_i;
-            pla[2] = p;
-            pla[3] = 300;
-            plantys.Add(pla);
+            // the  2 if statements are to make sure we don't make many plants the same place
+            if (are_there_plants())
+            {
+                float scale = Terrain.t_scale;
+                float y_1 = (((y / scale) - ((y / scale) % 32f)) / 32f);
+                float x_1 = (((x / scale) - ((x / scale) % 32f)) / 32f);
+                int x_i = (int)x_1;
+                int y_i = (int)y_1; 
+                int[] pla = new int[5];
+                pla[0] = x_i;
+                pla[1] = y_i;
+                // plant growth
+                pla[2] = 1;
+                // plant wetness
+                pla[3] = 300;
+                //plant type
+                pla[4] = p;
+                plantys.Add(pla);
+            }
+            else
+            {
+                if (Plant_Check_b(x, y))
+                {
+                    float scale = Terrain.t_scale;
+                    float y_1 = (((y / scale) - ((y / scale) % 32f)) / 32f);
+                    float x_1 = (((x / scale) - ((x / scale) % 32f)) / 32f);
+                    int x_i = (int)x_1;
+                    int y_i = (int)y_1; 
+                    int[] pla = new int[4];
+                    pla[0] = x_i;
+                    pla[1] = y_i;
+                    pla[2] = p;
+                    pla[3] = 300;
+                    plantys.Add(pla);
+                }
+            }
         }
         #region remove later
         private static void Sort_Plants(int[] plants)
@@ -87,17 +112,16 @@ namespace _2UgersProject_Stardew_Valley
         #region updating
         public static void update(float deltatime)
         {
-            Grow(deltatime);
-        }
-        public static void Grow(float deltatime)
-        {
             grow += deltatime;
+            // forgot i was gonna work with floats, and my plant list is ints. so this int will make more int like.
             if (grow > 1)
             {
                 for (int i = 0; i < plantys.Count; i++)
                 {
+                    //if below max growth
                     if (plantys[i][2] < 1000)
                     {
+                        // if wet
                         if (plantys[i][3] > 0)
                         {
                             plantys[i][2] += 10;
@@ -114,6 +138,14 @@ namespace _2UgersProject_Stardew_Valley
         }
         #endregion
         #region actions
+        /// <summary>
+        /// General checking function, given standard x and y coords, it will make those coords compatible, 
+        /// and then go through all plants to check if theres a plant at given location, was gonna make it return true, 
+        /// but giving the index of the plant proves more usefull, returns a -1 in case of false.
+        /// </summary>
+        /// <param name="x"> x coords </param>
+        /// <param name="y"> y coords </param>
+        /// <returns></returns>
         private static int check(float x, float y)
         {
             x = (((x / scale) - ((x / scale) % 32f)) / 32f);
@@ -132,6 +164,16 @@ namespace _2UgersProject_Stardew_Valley
             }
             return -1;
         }
+        //removes plant at location
+        public static void plant_re(float x, float y)
+        {
+            int i = check(x, y);
+            if (i > -1)
+            {
+                plantys.RemoveAt(i);
+            }
+        }
+        // increases wetness of given plant
         public static void plant_wet(float x, float y)
         {
             int i = check(x, y);
@@ -140,6 +182,8 @@ namespace _2UgersProject_Stardew_Valley
                 plantys[i][3] += 100;
             }
         }
+        #region checks
+        // plant check, returns growth
         public static int Plant_Check_G(float x, float y)
         {
             int i = check(x, y);
@@ -149,6 +193,7 @@ namespace _2UgersProject_Stardew_Valley
             }
             return 0; 
         }
+        // plant check, returns bool, if theres a plant at location
         public static bool Plant_Check_b(float x, float y)
         {
             int i = check(x, y);
@@ -158,6 +203,7 @@ namespace _2UgersProject_Stardew_Valley
             }
             return false;
         }
+        // plant check, returns wetness
         public static int Plant_Check_wet(float x, float y)
         {
             int i = check(x, y);
@@ -167,6 +213,16 @@ namespace _2UgersProject_Stardew_Valley
             }
             return -1; ;
         }
+        // plant check, returns bool, if there are plants
+        public static bool are_there_plants()
+        {
+            if (plantys.Count > 0)
+            {
+                return true;
+            }
+            return false;
+        }
+        #endregion
         #endregion
 
     }
