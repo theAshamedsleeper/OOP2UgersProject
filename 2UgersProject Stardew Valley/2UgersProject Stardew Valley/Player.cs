@@ -11,7 +11,7 @@ namespace _2UgersProject_Stardew_Valley
         private float hunger;//food bar.
         private int x1 = 0;
         private bool canMove = true;//Makes it so you cant move during an animation
-        private float foodDecrease = 2f;//Increase to slowdown food decrease
+        private float foodDecrease = 20f;//Increase to slowdown food decrease
         private float idleTimer;
         private float animationIsRunningtimer;
         private bool hasEnergy = true;
@@ -98,6 +98,8 @@ namespace _2UgersProject_Stardew_Valley
         public override void Update(GameTime gameTime)
         {
             sourceRectangles = new Rectangle(x1, 0, 32, 64);
+            
+            Inventory.player_pos(position.X, position.Y);
 
             Move(gameTime);
             HandleInput(gameTime);
