@@ -115,6 +115,24 @@ namespace _2UgersProject_Stardew_Valley
 
             KeyboardState keySate = Keyboard.GetState();
             walkTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+            #region planting
+            if (animationIsRunningWater == false && animationIsRunningHoe == false)
+            {
+                if (hasEnergy == true)
+                {
+                    if (keySate.IsKeyDown(Keys.F))
+                    {
+                        if (Terrain.Which_Terrain(position.X+32,position.Y+32) == 6)
+                        {
+                            if (Plant_t.Plant_Check_b(position.X+32, position.Y+32) == false)
+                            {
+                                Plant_t.New_Plant(position.X+32, position.Y+32, 1);
+                            }
+                        }
+                    }
+                }
+            }
+            #endregion
             #region watering
             if (animationIsRunningWater == false && animationIsRunningHoe == false)
             {
@@ -125,8 +143,12 @@ namespace _2UgersProject_Stardew_Valley
                         x1 = 0;
                         animationIsRunningWater = true;
                         charSpriteIndex = 5;
-
+                        
                         energy -= 5;
+                        if (Plant_t.Plant_Check_b(position.X + 32, position.Y + 32))
+                        {
+                            Plant_t.plant_wet(position.X + 32, position.Y + 32);
+                        }
                     }
                 }
 
@@ -149,11 +171,11 @@ namespace _2UgersProject_Stardew_Valley
                     }
                 }
                 animationIsRunningtimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
-                if (animationIsRunningtimer > 2)
+                if (animationIsRunningtimer > 1.5f)//the lower you set the value the faster the animation is over.
                 {
-                    if (Terrain.Which_Terrain(position.X, position.Y) == 4) //if the value of the terrain is equal to 4 then change the terrain to terrain value 6
+                    if (Terrain.Which_Terrain(position.X+32, position.Y + 32) == 4) //if the value of the terrain is equal to 4 then change the terrain to terrain value 6
                     {
-                        Terrain.Terrain_Change(position.X, position.Y, 6);//changes to Watered hoed ground
+                        Terrain.Terrain_Change(position.X + 32, position.Y + 32, 6);//changes to Watered hoed ground
                     }
                     animationIsRunningWater = false;
                     animationIsRunningtimer = 0;
@@ -163,13 +185,20 @@ namespace _2UgersProject_Stardew_Valley
 
             #endregion
             #region Hoeing
-            if (Terrain.Which_Terrain(position.X, position.Y) == 2)
+            if (Terrain.Which_Terrain(position.X + 32, position.Y + 32) == 2)
             {
                 canHoe = false;
             }
             else
             {
                 canHoe = true;
+            }
+            if (Plant_t.are_there_plants())
+            {
+                if (Plant_t.Plant_Check_b(position.X + 32, position.Y + 32) == false)
+                {
+                    canHoe = true;
+                }
             }
             if (canHoe == true && animationIsRunningHoe == false && animationIsRunningWater == false)
             {
@@ -195,7 +224,14 @@ namespace _2UgersProject_Stardew_Valley
                     {
                         x1 = 0;
                         HoeingTimer = 0;
-                        Terrain.Terrain_Change(position.X, position.Y, 4);
+                        // checks if terrain is planted terrain
+                        if (Terrain.Which_Terrain(position.X + 32, position.Y + 32) == 6)
+                        {
+                            // eating and removing the plant at the location
+                            hunger += Plant_t.Plant_Check_G(position.X + 32, position.Y + 32) / 20;
+                            Plant_t.plant_re(position.X + 32, position.Y + 32);
+                        }
+                        Terrain.Terrain_Change(position.X + 32, position.Y + 32, 4);//Changes the tile to tile 4 from player pos
                     }
                     else
                     {
@@ -204,7 +240,7 @@ namespace _2UgersProject_Stardew_Valley
                     }
                 }
                 animationIsRunningtimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
-                if (animationIsRunningtimer > 1.5f)
+                if (animationIsRunningtimer > 1.5f)//the lower you set the value the faster the animation is over.
                 {
                     animationIsRunningHoe = false;
                     animationIsRunningtimer = 0;
@@ -345,7 +381,7 @@ namespace _2UgersProject_Stardew_Valley
                 #endregion
 
             }
-            if (keySate.IsKeyDown(Keys.R))
+            if (keySate.IsKeyDown(Keys.R)) //gives you food at the press of a button
             {
                 hunger += 5;
                 if (hunger > 64)
