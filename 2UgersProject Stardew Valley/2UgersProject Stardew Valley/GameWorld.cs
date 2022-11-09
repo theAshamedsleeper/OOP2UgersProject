@@ -325,8 +325,10 @@ namespace _2UgersProject_Stardew_Valley
 
             base.Draw(gameTime);
         }
+        // drawing box
         private void box()
         {
+            //
             float x = Inventory.player_pos_x + 32 - (Inventory.player_pos_x + 32) % 60;
             float y = Inventory.player_pos_y + 32 - (Inventory.player_pos_y + 32) % 60;
             int width = (int)(32 * worldScale);
