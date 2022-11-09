@@ -25,6 +25,7 @@ namespace _2UgersProject_Stardew_Valley
         private Texture2D texture_plants;
         private Texture2D button_inv;
         private Texture2D button_baground;
+        private Texture2D pixel;
         private Texture2D[] onions_sprite = new Texture2D[2];
         private Rectangle onions_rec;
         protected Texture2D seedChest;
@@ -34,7 +35,6 @@ namespace _2UgersProject_Stardew_Valley
         private bool inv = false;
         private int Onion_x = 0;
         private int o_s_wet = 0;
-        public Rectangle seedChestRectangle;
         public GameWorld()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -70,7 +70,7 @@ namespace _2UgersProject_Stardew_Valley
             seedChest = Content.Load<Texture2D>("Sprites/seedCheestSprite");
             onions_sprite[0] = Content.Load<Texture2D>("Sprites/OnionGrowingNotWater");
             onions_sprite[1] = Content.Load<Texture2D>("Sprites/Watered growin Onion");
-            seedChestRectangle = new Rectangle(100, 100, 32, 64);
+            pixel = Content.Load<Texture2D>("pixel");
             //player
             for (int i = 0; i < gameObjects.Count; i++)
             {
@@ -127,22 +127,10 @@ namespace _2UgersProject_Stardew_Valley
             Inventory.timer_count(deltaTime);
             Inventory.timer_count_closed(deltaTime);
             #endregion
+            Plant_t.update(deltaTime);
             // TODO: Add your update logic here
             base.Update(gameTime);
-
-
-
         }
-
-        public bool CollisionWithChest (GameObjects other)
-        {
-            if (this == other)
-                return false;
-
-           return seedChestRectangle.Intersects(other.seedChestRectangle);
-        }
-
-
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
@@ -258,10 +246,13 @@ namespace _2UgersProject_Stardew_Valley
                 }
             }
             #endregion
+            #region box color
+            box();
+            #endregion
             #region store
             _spriteBatch.Draw(seedChest,//what to draw
                    new Vector2(100, 100),//place to draw it
-                   seedChestRectangle,//rectangle
+                   null,//rectangle
                    Color.White,//color of player
                    0f, //Rotation of player in radianer
             new Vector2(0, 0),//Orgin Point
@@ -315,6 +306,22 @@ namespace _2UgersProject_Stardew_Valley
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);
+        }
+        private void box()
+        {
+            float x = Inventory.player_pos_x + 32 - (Inventory.player_pos_x + 32) % 60;
+            float y = Inventory.player_pos_y + 32 - (Inventory.player_pos_y + 32) % 60;
+            int width = (int)(32 * worldScale);
+            int height = (int)(32 * worldScale);
+            Rectangle top = new Rectangle((int)x, (int)y, width, 1);
+            Rectangle bottom = new Rectangle((int)x, (int)y + height, width, 1);
+            Rectangle left = new Rectangle((int)x, (int)y, 1, height);
+            Rectangle right = new Rectangle((int)x + width, (int)y, 1, height);
+
+            _spriteBatch.Draw(pixel, top, null, Color.Red, 0, Vector2.Zero, SpriteEffects.None, 1);
+            _spriteBatch.Draw(pixel, bottom, null, Color.Red, 0, Vector2.Zero, SpriteEffects.None, 1);
+            _spriteBatch.Draw(pixel, left, null, Color.Red, 0, Vector2.Zero, SpriteEffects.None, 1);
+            _spriteBatch.Draw(pixel, right, null, Color.Red, 0, Vector2.Zero, SpriteEffects.None, 1);
         }
         protected void InstantiateGameObjects(GameObjects go)
         {
