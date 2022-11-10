@@ -187,7 +187,6 @@ namespace _2UgersProject_Stardew_Valley
 
             #endregion
             #region Hoeing
-           
             if (Plant_t.are_there_plants())
             {
                 if (Plant_t.Plant_Check_G(position.X + 32, position.Y + 32) == 0)
@@ -226,7 +225,6 @@ namespace _2UgersProject_Stardew_Valley
                         charSpriteIndex = 6;
                     }
                 }
-
             }
             if (animationIsRunningHoe == true)
             {
