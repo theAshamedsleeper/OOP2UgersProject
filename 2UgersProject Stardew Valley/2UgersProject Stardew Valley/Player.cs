@@ -1,7 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
 
 namespace _2UgersProject_Stardew_Valley
 {
@@ -29,7 +31,17 @@ namespace _2UgersProject_Stardew_Valley
         private int WateringThreshold;
         private float WateringTimer;
         private bool animationIsRunningWater = false;
-
+        private SoundEffect hoe_sound;
+        private SoundEffect plant_sound;
+        private SoundEffect water_sound;
+        private SoundEffect step_1;
+        private SoundEffect step_2;
+        private SoundEffect step_3;
+        private SoundEffect step_4;
+        private SoundEffect step_5;
+        private SoundEffect step_6;
+        private SoundEffect step_7;
+        private float sound_time;
 
         public Player(Vector2 pos) : base(pos)
         {
@@ -89,11 +101,54 @@ namespace _2UgersProject_Stardew_Valley
             position1[4] = new Vector2(84, 204);//position af foodbackgroundBar 
             energyRecBar[3] = new Rectangle(0, 0, 12, 68);//size of foodbackgroundBar
             #endregion
-
-
+            #region
+            hoe_sound = content.Load<SoundEffect>("Hoe Sounds");
+            plant_sound = content.Load<SoundEffect>("plant");
+            water_sound = content.Load<SoundEffect>("water");
+            step_1 = content.Load<SoundEffect>("step_a");
+            step_2 = content.Load<SoundEffect>("step_b");
+            step_3 = content.Load<SoundEffect>("step_c");
+            step_4 = content.Load<SoundEffect>("step_d");
+            step_5 = content.Load<SoundEffect>("step_e");
+            step_6 = content.Load<SoundEffect>("step_f");
+            step_7 = content.Load<SoundEffect>("step_g");
+            #endregion
             energy = energyRecBar[0].Height;
             hunger = energyRecBar[2].Height;
 
+        }
+        private void Walk_Sound(GameTime gameTime)
+        {
+            sound_time += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+            if (sound_time > 500)
+            {
+                Random rnd = new Random();
+                switch (rnd.Next(7) + 1)
+                {
+                    case 1:
+                        step_1.Play();
+                        break;
+                    case 2:
+                        step_2.Play();
+                        break;
+                    case 3:
+                        step_3.Play();
+                        break;
+                    case 4:
+                        step_4.Play();
+                        break;
+                    case 5:
+                        step_5.Play();
+                        break;
+                    case 6:
+                        step_6.Play();
+                        break;
+                    case 7:
+                        step_7.Play();
+                        break;
+                }
+                sound_time -= 500;
+            }
         }
         public override void Update(GameTime gameTime)
         {
@@ -128,6 +183,7 @@ namespace _2UgersProject_Stardew_Valley
                         {
                             if (Plant_t.Plant_Check_b(position.X+32, position.Y+32) == false)
                             {
+                                plant_sound.Play();
                                 Plant_t.New_Plant(position.X+32, position.Y+32, 1);
                             }
                         }
@@ -145,7 +201,7 @@ namespace _2UgersProject_Stardew_Valley
                         x1 = 0;
                         animationIsRunningWater = true;
                         charSpriteIndex = 5;
-                        
+                        water_sound.Play();
                         energy -= 5;
                         if (Plant_t.Plant_Check_b(position.X + 32, position.Y + 32))
                         {
@@ -224,6 +280,8 @@ namespace _2UgersProject_Stardew_Valley
                         animationIsRunningHoe = true;
                         energy -= 5;
                         charSpriteIndex = 6;
+                        hoe_sound.Play();
+                        
                     }
                 }
 
@@ -390,6 +448,7 @@ namespace _2UgersProject_Stardew_Valley
                 #endregion
                 if (velocity != Vector2.Zero)
                 {
+                    Walk_Sound(gameTime);
                     velocity.Normalize();
                 }
                 #endregion

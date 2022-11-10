@@ -203,3 +203,17 @@ C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersPr
 C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\pixel.xnb
 C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Sprites\seedCheestSprite.xnb
 C:\Users\thorb\stuff\Skole\1.Semester\OOP\2 uger Gruppe Project\Spil\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Sprites\seeds.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Sprites\seeds.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Red Raven Fantasy.ogg
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Red Raven Fantasy.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Hoe Sounds.ogg
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\Hoe Sounds.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\plant.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\water.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\step_a.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\step_b.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\step_c.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\step_d.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\step_e.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\step_f.xnb
+C:\Users\thorb\OneDrive\Dokumenter\GitHub\2Uger pro\OOP2UgersProject\2UgersProject Stardew Valley\2UgersProject Stardew Valley\bin\Debug\net6.0\Content\step_g.xnb
