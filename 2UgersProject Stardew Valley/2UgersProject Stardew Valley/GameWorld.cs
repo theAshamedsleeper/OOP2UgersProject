@@ -37,6 +37,9 @@ namespace _2UgersProject_Stardew_Valley
         private bool inv = false;
         private int Onion_x = 0;
         private int o_s_wet = 0;
+        private SpriteFont ContFont;
+        private SpriteFont PickFont;
+        private bool pickedUpBool = false;
         public GameWorld()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -76,6 +79,9 @@ namespace _2UgersProject_Stardew_Valley
             seedChest = Content.Load<Texture2D>("Sprites/seedCheestSprite");
             onions_sprite[0] = Content.Load<Texture2D>("Sprites/OnionGrowingNotWater");
             onions_sprite[1] = Content.Load<Texture2D>("Sprites/Watered growin Onion");
+            ContFont = Content.Load<SpriteFont>("File");
+            PickFont = Content.Load<SpriteFont>("Pickup");
+
             pixel = Content.Load<Texture2D>("pixel");
             //player
             for (int i = 0; i < gameObjects.Count; i++)
@@ -136,13 +142,16 @@ namespace _2UgersProject_Stardew_Valley
 
             #region Store
 
+            //"If X is pressed and player collides with chest, give one seed":
             if (Keyboard.GetState().IsKeyDown(Keys.X))
             {
                 if (Store.CollisionWithChest(Inventory.player_pos_x, Inventory.player_pos_y, 32, 64))
                 {
+                    //Function from Inventory, that adds items from the index.
                     Inventory.inv_give(1, 1);
-                    //Index mangler ^
 
+                    pickedUpBool = true;
+                   
 
                 }
 
@@ -160,6 +169,7 @@ namespace _2UgersProject_Stardew_Valley
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
             _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
+
             #region terain World
             // x and y coords of where the terrain tiles are drawn.
             float gx = 0f;
@@ -284,6 +294,13 @@ namespace _2UgersProject_Stardew_Valley
                    2f,//How big is the player
                    SpriteEffects.None,//effects
                    0.9f);//Layer higher the number further back it is
+
+            if (pickedUpBool == true)
+            {
+                _spriteBatch.DrawString(PickFont, "Seed Picked up!", new Vector2(73, 40), Color.White);
+            }
+            
+
             #endregion
             #region Player
             foreach (GameObjects go in gameObjects)
@@ -326,6 +343,9 @@ namespace _2UgersProject_Stardew_Valley
                 }
             }
             #endregion
+            _spriteBatch.DrawString(ContFont, "Walk: W S A D \n Use hoe: Q \n Water ground: E \n Plant seeds: F \n Pick up seed from chest: X", new Vector2(1600,100), Color.White);
+
+         
             _spriteBatch.End();
 
             // TODO: Add your drawing code here

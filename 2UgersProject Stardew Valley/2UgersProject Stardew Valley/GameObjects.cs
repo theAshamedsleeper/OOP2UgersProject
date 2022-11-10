@@ -15,7 +15,6 @@ namespace _2UgersProject_Stardew_Valley
         protected float scale;
         protected float speed = 200f;
         protected Vector2 velocity;
-        public Vector2 pos_p { get { return position; } }
 
         #region Character attributes
         protected byte charSpriteIndex=0;
@@ -57,7 +56,7 @@ namespace _2UgersProject_Stardew_Valley
         {
             //player
             Vector2 origin = new Vector2(sourceRectangles.Width / 2, sourceRectangles.Height / 2);
-            spriteBatch.Draw(charaset[charSpriteIndex],//what to draw
+            spriteBatch.Draw(currentSprite,//what to draw
                 position,//place to draw it
                 sourceRectangles,//rectangle
                 Color.White,//color of player
@@ -67,8 +66,6 @@ namespace _2UgersProject_Stardew_Valley
                 SpriteEffects.None,//effects
                 0f);//Layer higher the number further back it is 
             //draws the sprite sheet for debugging
-            spriteBatch.Draw(charaset[charSpriteIndex], position1[0], Color.White);
-
             #region Draw Food and energy
             //draw background color for energyBar
             spriteBatch.Draw(barSprite[1],

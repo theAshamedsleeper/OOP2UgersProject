@@ -9,6 +9,10 @@ namespace _2UgersProject_Stardew_Valley
         private static int storeWidth = 120;
         private static int storeHeight = 120;
 
+
+
+        //A function that checks if another specific object is within the borders of the store chest.
+        // - (Used in Update.Region:Store in GameWorld)
         public static bool CollisionWithChest(float otherX,float otherY,int otherWidth,int otherHeight)
         {
             if (otherX > storeX && otherX < storeX + storeWidth

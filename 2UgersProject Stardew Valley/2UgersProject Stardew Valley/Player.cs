@@ -43,6 +43,7 @@ namespace _2UgersProject_Stardew_Valley
         private SoundEffect step_7;
         private float sound_time;
 
+
         public Player(Vector2 pos) : base(pos)
         {
             scale = 2f;//scale of the player
@@ -101,7 +102,7 @@ namespace _2UgersProject_Stardew_Valley
             position1[4] = new Vector2(84, 204);//position af foodbackgroundBar 
             energyRecBar[3] = new Rectangle(0, 0, 12, 68);//size of foodbackgroundBar
             #endregion
-            #region
+            #region sound
             hoe_sound = content.Load<SoundEffect>("Hoe Sounds");
             plant_sound = content.Load<SoundEffect>("plant");
             water_sound = content.Load<SoundEffect>("water");
@@ -113,6 +114,8 @@ namespace _2UgersProject_Stardew_Valley
             step_6 = content.Load<SoundEffect>("step_f");
             step_7 = content.Load<SoundEffect>("step_g");
             #endregion
+
+
             energy = energyRecBar[0].Height;
             hunger = energyRecBar[2].Height;
 
@@ -122,6 +125,7 @@ namespace _2UgersProject_Stardew_Valley
             sound_time += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
             if (sound_time > 500)
             {
+                #region rnd switch
                 Random rnd = new Random();
                 switch (rnd.Next(7) + 1)
                 {
@@ -147,6 +151,7 @@ namespace _2UgersProject_Stardew_Valley
                         step_7.Play();
                         break;
                 }
+                #endregion
                 sound_time -= 500;
             }
         }
@@ -177,7 +182,7 @@ namespace _2UgersProject_Stardew_Valley
             {
                 if (hasEnergy == true)
                 {
-                    if (keySate.IsKeyDown(Keys.F))
+                    if (keySate.IsKeyDown(Keys.F)/* && pickedUpBool == true*/)
                     {
                         if (Terrain.Which_Terrain(position.X+32,position.Y+32) == 6)
                         {
@@ -281,7 +286,6 @@ namespace _2UgersProject_Stardew_Valley
                         energy -= 5;
                         charSpriteIndex = 6;
                         hoe_sound.Play();
-                        
                     }
                 }
 
