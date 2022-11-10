@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 using System;
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
@@ -26,6 +27,7 @@ namespace _2UgersProject_Stardew_Valley
         private Texture2D button_inv;
         private Texture2D button_baground;
         private Texture2D pixel;
+        private Song BagroundMusic;
         private Texture2D[] onions_sprite = new Texture2D[2];
         private Rectangle onions_rec;
         protected Texture2D seedChest;
@@ -60,6 +62,10 @@ namespace _2UgersProject_Stardew_Valley
 
         protected override void LoadContent()
         {
+            BagroundMusic = Content.Load<Song>("Red Raven Fantasy");
+            MediaPlayer.Volume = 0.3f;
+            MediaPlayer.Play(BagroundMusic);
+            MediaPlayer.IsRepeating = true;
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             grass_terrain = Content.Load<Texture2D>("pixil-frame-0");
             grass2_terrain = Content.Load<Texture2D>("pixil-frame-1");

@@ -104,6 +104,12 @@
 /processorParam:TextureFormat=Compressed
 /build:File.spritefont
 
+#begin Hoe Sounds.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Hoe Sounds.mp3
+
 #begin Pickup.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor
@@ -243,6 +249,18 @@
 /processorParam:TextureFormat=Color
 /build:pixilart-frames_4/pixil-frame-4.png
 
+#begin plant.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:plant.mp3
+
+#begin Red Raven Fantasy.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Red Raven Fantasy.mp3
+
 #begin Sprites/FoodEnergyBarSprite/BackgroundBar.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -314,4 +332,52 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Sprites/WatedHoeGround.png
+
+#begin step_a.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:step_a.mp3
+
+#begin step_b.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:step_b.mp3
+
+#begin step_c.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:step_c.mp3
+
+#begin step_d.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:step_d.mp3
+
+#begin step_e.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:step_e.mp3
+
+#begin step_f.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:step_f.mp3
+
+#begin step_g.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:step_g.mp3
+
+#begin water.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:water.wav
 
